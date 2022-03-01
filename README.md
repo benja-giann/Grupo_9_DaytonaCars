@@ -1,13 +1,13 @@
-<h3> ¿Qué productos o servicios brinda nuestro sitio? </3>
+<h3> ¿Qué productos o servicios brinda nuestro sitio? </h3>
 
 <p> Nuestro sitio brinda la opción de comprar vehículos automotores nuevos, de segunda mano en buen estado y vehículos eléctricos. Ofrecemos también la opción de agendar citas para realizar un test drive y mantenimientos al vehículo una vez cumplido el tiempo estipulado para ello.  
 La compra de vehículos nuevos cuenta con la posibilidad de elegir color, modelo, entre otras opciones. </p>
 
-<h3> ¿Quién será nuestra audiencia objetivo? </3>
+<h3> ¿Quién será nuestra audiencia objetivo? </h3>
 
 <p>Esta página está diseñada para la venta de vehículos nuevos o de segunda mano a hombres y mujeres que se encuentren en edades hábiles para conducir y deseen adquirir su vehículo de manera rápida y confiable.</p>
 
-<h3> ¿Como ajustaremos nuestra oferta a ese público? </3>
+<h3> ¿Como ajustaremos nuestra oferta a ese público? </h3>
 <p>A través del desarrollo de una interfaz gráfica amigable que genere confianza en el usuario, pretendemos lograr la consecución de una gran cantidad de clientes que refieran nuestro sitio como el número 1 en compra de vehículos. </p>
 
 
