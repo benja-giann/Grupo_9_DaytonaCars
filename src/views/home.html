@@ -12,67 +12,108 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img class="header-logo" src="" alt="logo">
-        <div>
-        <h5 class="header-title">Bienvenida</h5>
-        </div>
+    <header class="header">
+        <nav class="nav-bar">
+            <ul class="nav-bar__items">
+            <li class="nav-bar__item"> 
+                <p>liks rapidos</p>
+            </li>
+            <li class="nav-bar__item" >
+                <p id="búsqueda">
+                    <input type="search" name="búsqueda" placeholder="Buscar marcas...">
+                    <input type="Submit" value="Buscar">
+                </p>
+            </li>
+            <li class="nav-bar__item">
+                <div>
+                    <form action="/" method="get"></form>
+                    <label for="pais" name="Pais"></label>
+                    <p>Pais</p>
+                    <select name="pais" id="pais">
+                        <option value="Colombia">Colombia</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Colombia">Colombia</option>
+                    </select>
+                </div>
+            </li>
+            <li class="nav-bar__item">
+                <a href="#">Cuenta</a><i class="fa-solid fa-user"></i>
+            </li>
+            <li class="nav-bar__item">
+                <a href="#">Carrito</a><i class="fa-solid fa-cart-shopping"></i>
+            </li> 
+        </ul>                 
+        </nav>
+    
     </header>
-    <main class="main">
-     <section class="registro-con-correo">
-        <br>
-        <form class="registro-con-correo-a" action="/registro" method="post">
-            <input type="email" name="email" value="ingrese su correo electronico" id="ingreso-correo">
-            <br>
-            <input type="text" name="contraseña" value="ingrese su contraseña" id="ingreso-contraseña">
-        </form> 
-        <div class="recuperar-contraseña"> 
-            <A HREF="otra_pagina.html"> ¿olvidó su contraseña? </A>
-            <A HREF="otra_pagina.html"> Ayuda </A> 
-        </div>
-      </section>
-      <section class="registro-con-cuentas">
-        <form action="/registro" method="post">
-            <input type="email" name="email" value="SignIn Google" id="ingreso-correo">
-            <i class="fa-brands fa-google"></i>
-            <br>
-            <input type="text" name="contraseña" value="SignIn Facebook" id="ingreso-contraseña">
-            <i class="fa-brands fa-facebook"></i>
-            <br>
-            <input type="text" name="contraseña" value="SignIn Twitter" id="ingreso-contraseña">
-            <i class="fa-brands fa-twitter"></i>
-      </section>
-        <div class="boton-enviar">
-            <button type="submit">Create Account</button> 
-        </div>
-    </main>
-</body>
-<footer>
-    <p>SOLO POR AHORA USAR FOOTER DE MERCADO LIEBRE</p>
-    <section class="footer-items">
-        <section>
-        <div class="tarjeta-credito"><i class="fa-solid fa-credit-card"></i></div>
-        <h3>Pagá con tarjeta o en efectivo</h3>
-        <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!
-        </p>
-    </section>
-    <section>
-        <div class="envio-gratis"><i class="fa-solid fa-gift"></i></div>
-        <h3>Envío gratis desde $ 2.500</h3>
-        <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
-    </section>
-    <br>
-    <section>
-        <div class="seguridad"><i class="fa-solid fa-user-shield"></i></div>
-        <h3>Seguridad, de principio a fin</h3>
-        <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.
-        </p>
-    </section>  
-    <br>
-</section>
-<div>
-     <p>Copyright © 1999-2020 Mercado-liebre S.R.L.</p>
-</div>  
 
-</footer>
+    <main>
+        <div class="carrusel">
+
+            <div class="atras botones">
+                &#60
+            </div>
+
+            <div class="botones adelante">
+                &#62
+            </div>
+
+            <img src="" alt="imagen">
+
+            <script src=""></script>
+                
+        </div>
+
+            <p>Navegación entre secciones</p>
+                
+        <section class="secciones">
+            
+            <section class="nuevos">
+                <p>Nuevos</p>
+            </section>
+                
+            <section class="usados">
+                <p>Usados</p>
+            </section>
+                
+            <section class="servicios">
+                <p>Servicios</p>
+            </section>
+
+            <section class="test-drive">
+               <p>Test Drive</p> 
+            </section>
+            
+        </section>
+
+    </main>
+    
+
+    <footer>
+        <section class="items-footer">
+            <section>
+                <div class="tarjeta-credito"><i class="fa-solid fa-credit-card"></i></div>
+                <h3>Pagá con tarjeta o en efectivo</h3>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!
+                </p>
+            </section>
+            <br>
+            <section>
+                <div class="envio-gratis"><i class="fa-solid fa-gift"></i></div>
+                <h3>Envío gratis desde $ 2.500</h3>
+                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+            </section>
+            <br>
+            <section>
+                <div class="seguridad"><i class="fa-solid fa-user-shield"></i></div>
+                <h3>Seguridad, de principio a fin</h3>
+                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.
+                </p>
+            </section>  
+        </section>
+        <br>
+        <p>Copyright © 1999-2020 Mercado-liebre S.R.L.</p>
+            
+    </footer>
+</body>
 </html>
