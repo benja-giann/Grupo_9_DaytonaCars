@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <img
+        class="imagen-logo-header"
+        src="/images/logo-mercado-liebre.svg"
+        alt="logo"
+      />
+    </header>
+
+    <main>
+        <div class="mensaje-bienvenida">
+            <p>Mensaje de Bienvenida</p>
+        </div>
+
+        <section class="formulario-registro">
+            <form action="/login" method="get"></form>
+            <input type= "text" name="Nombre" placeholder="Nombre y apellido" id="formulario-nombre"></input>
+            <br>
+            <input type= "text" name="Nombre de usuario" placeholder="Nombre de usuario" id="formulario-nombre-de-usuario"></input>
+            <br>
+            <label for="fecha de nacimiento">Fecha de nacimiento</label>
+                <input type= "date" name="Fecha de nacimiento"  id=""></input>
+            <select name="pais" id="sexo">
+                <option value="Colombia">Femenino</option>
+                <option value="Argentina">Masculino</option> 
+            </select>
+            <br>
+            <input type= "text" name="numero de documeto" placeholder="Numero de documento" id="formulario-numero-de-documento"></input>
+            <input type="tel" name="Telefono" placeholder="Numero de telefono" id="formulario-numero-de-telefono"></input>
+            <br>
+            <label>Seleccionar una imagen para el perfil</label>
+            <input type="file" name="avatar" accept="jpg" multiple>
+            <br>
+            <input type= "text" name="email" placeholder="ingrese su correo electronico" id="formulario-correo-electronico"></input>
+            <br>
+            <input type= "password" name="contraseña" placeholder="Contraseña" id=""></input>
+            <br>
+            <input type= "password" name="confirmacion_contraseña" placeholder="Confirmar contraseña" id=""></input>
+            <br>
+            <label for="aceptacion terminos y condiciones">Acepta terminos y condiciones</label>
+                <input type= "checkbox" name="aceptacion terminos y condiciones" value="accept" id=""></input>
+
+            <div>
+                <button type="reset">Reset</button>
+                <button type="submit">Crear cuenta</button>
+            </div>
+            
+        
+        
+        </section>
+    </main>
+    <br>
+    <footer>
+      <section class="items-footer">
+        <section>
+          <section>
+            <div class="tarjeta-credito">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <h3>Pagá con tarjeta o en efectivo</h3>
+            <p>
+              Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
+              efectivo en puntos de pago. ¡Y siempre es seguro!
+            </p>
+          </section>
+          <br />
+          <section>
+            <div class="envio-gratis"><i class="fa-solid fa-gift"></i></div>
+            <h3>Envío gratis desde $ 2.500</h3>
+            <p>
+              Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en
+              miles de productos. Es un beneficio de Mercado Puntos.
+            </p>
+          </section>
+          <br />
+          <section>
+            <div class="seguridad"><i class="fa-solid fa-user-shield"></i></div>
+            <h3>Seguridad, de principio a fin</h3>
+            <p>
+              ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no
+              puedas hacer, porque estás siempre protegid@.
+            </p>
+          </section>
+        </section>
+      </section>
+
+      <br />
+      <p>Copyright © 1999-2020 Mercado-liebre S.R.L.</p>
+    </footer>
+  </body>
+</html>

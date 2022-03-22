@@ -171,3 +171,9 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+
+.imagen-producto{
+    display: block;
+    width: 40%;
+}
