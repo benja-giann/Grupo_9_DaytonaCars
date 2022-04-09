@@ -14,4 +14,6 @@ app.get("/registro", (req, res) => res.sendFile(path.join(__dirname, "views", "r
 
 app.get("/detalles-del-producto", (req, res) => res.sendFile(path.join(__dirname, "views", "detalles-del-producto.html")))
 
+app.get("/facebook", (req, res) => res.sendFile(path.join(__dirname, "views", "detalles-del-producto.html")))
+
 app.listen(port, () => console.log("estoy funcionando en el puerto " + port));
