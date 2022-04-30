@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daytona</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2? family=Lato:wght@300&family=Roboto+Mono:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -22,7 +26,7 @@
         <nav class="letras">
             <ul>
                 <li><a href="/servicios">Servicio al Cliente</a></li>
-                <li><a href="/productos">Autos</a></li>
+                <li><a href="productos">Autos</a></li>
                 <li><a href="/ayuda">Ayuda</a></li>
             </ul>
 
@@ -31,45 +35,16 @@
                 <div class="inputBusqueda lupa"><i class="fa-solid fa-magnifying-glass"></i></div>
                 <li class="right"><a href="/register">Crea tu cuenta <i class="fa-solid fa-user"></i></a></li>
                 <li class="right"><a href="/login">Ingresa <i class="fa-solid fa-user-check"></i></a></li>
-                <li class="right"><a href="/carrito">Carrito <i class="fa-solid fa-basket-shopping"></i></a></li>
+                <li class="right"><a href="/detalle-producto">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
             </ul>
             </div>
         </nav>
     </header>
-
     <div class="banner2">
 
     </div>
 
 
-    <main class="main">
-        <section class="registro-con-correo">
-            <br>
-            <form class="registro-con-correo-a" action="/login" method="post">
-                <input type="email" name="email" value="ingrese su correo electronico" id="ingreso-correo">
-                <br>
-                <input type="text" name="contraseña" value="ingrese su contraseña" id="ingreso-contraseña">
-            </form>
-            <div class="recuperar-contraseña">
-                <A HREF="otra_pagina.html"> ¿olvidó su contraseña? </A>
-                <A HREF="otra_pagina.html"> Ayuda </A>
-            </div>
-        </section>
-        <section class="registro-con-cuentas">
-            <form action="/registro" method="post">
-                <input type="email" name="email" value="SignIn Google" id="ingreso-correo">
-                <i class="fa-brands fa-google"></i>
-                <br>
-                <input type="text" name="contraseña" value="SignIn Facebook" id="ingreso-contraseña">
-                <i class="fa-brands fa-facebook"></i>
-                <br>
-                <input type="text" name="contraseña" value="SignIn Twitter" id="ingreso-contraseña">
-                <i class="fa-brands fa-twitter"></i>
-        </section>
-        <div class="boton-enviar">
-            <button type="submit">Create Account</button>
-        </div>
-    </main>
 
     <footer>
         <div class="divsFooter">
@@ -108,6 +83,7 @@
             <br>
             <a href="/login" class="direcciones">Nafteros</a>
         </div>
+        <div></div>
         </section>
     </footer>
     <div class="piedefooter">
