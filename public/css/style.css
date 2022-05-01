@@ -1,240 +1,255 @@
 @import url("normalize.css");
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-ul li a{
-    color: white;
-    display: flex;
-    flex-direction: row;
+ul li a {
+  color: white;
+  display: flex;
+  flex-direction: row;
 }
 
-.banner2{
-    width: 1230px;
-    height: 350px;
-    border: 3px solid black;
-    margin: auto;
-   
-    background-size: 100% 100%;
+.banner2 {
+  height: 350px;
+  border: 3px solid black;
+  margin: auto;
+  object-fit: cover;
+  background-size: 100% 100%;
 
-    animation: banner2 10s infinite alternate;
-
+  animation: banner2 10s infinite alternate;
 }
 
-@keyframes banner2{
-    0%, 30%{
-        background-image: url(/images/bmw1.jpg);
-        
-    }
-    35%,65%{
-        background-image: url(/images/porche1.webp);
-        
-    }
-    70%,100%{
-        background-image: url(/images/ferrari6.jpg);
-    }
+@keyframes banner2 {
+  0%,
+  30% {
+    background-image: url(/images/bmw1.jpg);
+  }
+  35%,
+  65% {
+    background-image: url(/images/porche1.webp);
+  }
+  70%,
+  100% {
+    background-image: url(/images/ferrari6.jpg);
+  }
 }
 
 body {
-font-family: "Roboto", sans-serif;
-margin: 0;
-background-color:rgb(243, 237, 237);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: rgb(243, 237, 237);
 }
 
-img{
-width: 100%;
+img {
+  width: 100%;
 }
 
-.letras{
-    display: flex;
-    justify-content: space-between;
+.letras {
+  display: flex;
+  justify-content: space-between;
 }
 
+.productos {
+  padding: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-.productos{
-    padding: 90px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-
-    /* flex-wrap: wrap;
+  /* flex-wrap: wrap;
     width: 30%;
     display: flex;  
     flex-direction: row; */
 }
 
-.articulo{
-    margin-bottom: 10px;
-    background-color: #000;
-
+.articulo {
+  margin-bottom: 10px;
+  background-color: #000;
 }
 
-.precios{
-    color: #ebebeb;
-    font-size: 18px;
+.precios {
+  color: #ebebeb;
+  font-size: 18px;
 }
 
-.descripcion{
-    color: #ebebeb;
+.descripcion {
+  color: #ebebeb;
 }
 
-.autos{
-    display: flex;
-    flex-direction: row;
+.autos {
+  display: flex;
+  flex-direction: row;
 }
 
-@media(min-width: 361px){
-    
+@media (min-width: 361px) {
 }
 
 main {
-    margin: auto;
-    width: 90%;
+  margin: auto;
+  width: 90%;
 }
 
-article{
-    width: 400px;
-    border: 1px #ebebeb solid;
-    background-color: white;
-
- 
+article {
+  width: 400px;
+  border: 1px #ebebeb solid;
+  background-color: white;
 }
 
 header {
-    background-color:black;
-    padding: 10px;
-    width: 100%;
+  background-color: black;
+  padding: 10px;
+  width: 100%;
 }
 
-
-.fa-truck:before{
-    display: block;
-    font-size: 8px;
-    padding: 15px;
-    border: 1px solid red;
-    width: 20%;
-    height: 20%;
-    border-radius: 50%
-
+.fa-truck:before {
+  display: block;
+  font-size: 8px;
+  padding: 15px;
+  border: 1px solid red;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
 }
-p{
-    font-size: 12px;
-    color:red;
+p {
+  font-size: 12px;
+  color: red;
 }
 
-.camion{
-    text-align: right;
+.camion {
+  text-align: right;
 }
 
-h2{
-    font-size: 24px;
-    color:black;
+h2 {
+  font-size: 24px;
+  color: black;
 }
 
-h3{
-    font-size: 16px;
+h3 {
+  font-size: 16px;
 }
 
-input{
-    color: var(--grisOscuro);
+input {
+  color: var(--grisOscuro);
 }
 
-ul{
-    padding: 0;
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-  
+ul {
+  padding: 0;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
-ul li{
-    list-style: none;
-    margin-left: 10px;
+ul li {
+  list-style: none;
+  margin-left: 10px;
 }
 
-
-a{
-    text-decoration: none;
-    color: #000;
-    font-size: 12px;
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
 }
 
-#cuotas{
-    text-align: center;
-    margin-top: 10px;
+#cuotas {
+  text-align: center;
+  margin-top: 10px;
 }
 
 i {
-    margin-left: 10px;
-    margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.logo{
-    max-width:  200px;
-    width: 50%;
+.logo {
+  max-width: 200px;
+  width: 50%;
 }
 
 .inputBusqueda {
- display: inline;
- background-color: #fff;
- border: 1px solid #666;
+  display: inline;
+  background-color: #fff;
+  border: 1px solid #666;
 }
 
-
-
-.desc-descripcion{
-    font-size: 16px;
-    color: #39b54a;
+.desc-descripcion {
+  font-size: 16px;
+  color: #39b54a;
 }
 
-
-div{
-    text-align: center;
+div {
+  text-align: center;
 }
 
-
-@media(max-width:250px){
-    flex.container{
-        flex-direction: column;
-    }
-
+@media (max-width: 250px) {
+  flex.container {
+    flex-direction: column;
+  }
 }
 
+/* inputs */
+.formulario-registro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.input {
+  width: fit-content;
+  padding: 4px;
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+.button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border-width: 1px;
+  background-color: black;
+  color: white;
+}
 
 /*footer*/
-footer{
-    padding: 13%;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: black;
+footer {
+  padding: 13%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
 }
 
-
-.linea{
-    border-color: #fff; 
-    
+.linea {
+  border-color: #fff;
 }
 
-.divsFooter{
-    color:#fff;
-    background-color: #000;
+.divsFooter {
+  color: #fff;
+  background-color: #000;
 }
 
-.direcciones{
-    color: #ebebeb;
+.direcciones {
+  color: #ebebeb;
 }
 
-.piedefooter{
-    background-color: #000 ;
+.piedefooter {
+  background-color: #000;
 }
 
-.holafooter{
-    display: flex;
-    background-color: #000; 
-    color: #ebebeb; 
-    font-size: 12px;
+.holafooter {
+  display: flex;
+  background-color: #000;
+  color: #ebebeb;
+  font-size: 12px;
 }

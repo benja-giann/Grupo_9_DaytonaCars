@@ -47,45 +47,48 @@
 
     <section class="formulario-registro">
       <form action="/login" method="get"></form>
-      <input type="text" name="Nombre" placeholder="Nombre y apellido" id="formulario-nombre"></input>
-      <br>
-      <input type="text" name="Nombre de usuario" placeholder="Nombre de usuario"
+      <input class="input" type="text" name="Nombre" placeholder="Nombre y apellido" id="formulario-nombre"></input>
+
+      <input class="input" type="text" name="Nombre de usuario" placeholder="Nombre de usuario"
         id="formulario-nombre-de-usuario"></input>
-      <br>
-      <label for="fecha de nacimiento">Fecha de nacimiento</label>
-      <input type="date" name="Fecha de nacimiento" id=""></input>
-      <select name="pais" id="sexo">
+
+      <div class="input-container">
+        <label for="fecha de nacimiento">Fecha de nacimiento</label>
+        <input class="input" type="date" name="Fecha de nacimiento" id=""></input>
+      </div>
+      <select class="input" name="pais" id="sexo">
         <option value="Colombia">Femenino</option>
         <option value="Argentina">Masculino</option>
       </select>
-      <br>
-      <input type="text" name="numero de documeto" placeholder="Numero de documento"
-        id="formulario-numero-de-documento"></input>
-      <input type="tel" name="Telefono" placeholder="Numero de telefono" id="formulario-numero-de-telefono"></input>
-      <br>
-      <label>Seleccionar una imagen para el perfil</label>
-      <input type="file" name="avatar" accept="jpg" multiple>
-      <br>
-      <input type="text" name="email" placeholder="ingrese su correo electronico"
-        id="formulario-correo-electronico"></input>
-      <br>
-      <input type="password" name="contraseña" placeholder="Contraseña" id=""></input>
-      <br>
-      <input type="password" name="confirmacion_contraseña" placeholder="Confirmar contraseña" id=""></input>
-      <br>
-      <label for="aceptacion terminos y condiciones">Acepta terminos y condiciones</label>
-      <input type="checkbox" name="aceptacion terminos y condiciones" value="accept" id=""></input>
 
-      <div>
-        <button type="reset">Reset</button>
-        <button type="submit">Crear cuenta</button>
+      <input class="input" type="text" name="numero de documeto" placeholder="Numero de documento"
+        id="formulario-numero-de-documento"></input>
+      <input class="input" type="tel" name="Telefono" placeholder="Numero de telefono"
+        id="formulario-numero-de-telefono"></input>
+
+      <label>Seleccionar una imagen para el perfil</label>
+      <input class="input" type="file" name="avatar" accept="jpg" multiple>
+
+      <input class="input" type="text" name="email" placeholder="ingrese su correo electronico"
+        id="formulario-correo-electronico"></input>
+
+      <input class="input" type="password" name="contraseña" placeholder="Contraseña" id=""></input>
+
+      <input class="input" type="password" name="confirmacion_contraseña" placeholder="Confirmar contraseña"
+        id=""></input>
+
+      <div class="checkbox-container">
+        <input class="input" type="checkbox" name="aceptacion terminos y condiciones" value="accept" id=""></input>
+        <label for="aceptacion terminos y condiciones">Acepta terminos y condiciones</label>
       </div>
 
-
-
+      <div>
+        <button class="button" type="reset">Reset</button>
+        <button class="button" type="submit">Crear cuenta</button>
+      </div>
     </section>
   </main>
-  <br>
+
 
   <footer>
     <div class="divsFooter">
