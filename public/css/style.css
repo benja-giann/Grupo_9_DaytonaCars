@@ -1,4 +1,6 @@
 @import url("normalize.css");
+@import url(menu.css);
+@import url(main.css);
 
 * {
   margin: 0;
@@ -10,6 +12,14 @@ ul li a {
   color: white;
   display: flex;
   flex-direction: row;
+}
+
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: rgb(243, 237, 237);
 }
 
 .banner2 {
@@ -37,20 +47,11 @@ ul li a {
   }
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  background-color: rgb(243, 237, 237);
-}
 
 img {
   width: 100%;
 }
 
-.letras {
-  display: flex;
-  justify-content: space-between;
-}
 
 .productos {
   padding: 90px;
@@ -82,8 +83,7 @@ img {
   flex-direction: row;
 }
 
-@media (min-width: 361px) {
-}
+
 
 main {
   margin: auto;
@@ -97,9 +97,20 @@ article {
 }
 
 header {
-  background-color: black;
-  padding: 10px;
   width: 100%;
+  height: 50px;
+  background-color: #000;
+
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 100 ;
+}
+
+.pruebaHeader{
+  width: 98%;
+  margin:auto;
+  display: table;
 }
 
 .fa-truck:before {
@@ -136,8 +147,7 @@ input {
 ul {
   padding: 0;
   margin: 20px;
-  display: flex;
-  flex-direction: row;
+  
 }
 
 ul li {
@@ -162,15 +172,11 @@ i {
 }
 
 .logo {
-  max-width: 200px;
-  width: 50%;
+  float:left;
+  max-width: 44px;
+  
 }
 
-.inputBusqueda {
-  display: inline;
-  background-color: #fff;
-  border: 1px solid #666;
-}
 
 .desc-descripcion {
   font-size: 16px;
@@ -181,11 +187,7 @@ div {
   text-align: center;
 }
 
-@media (max-width: 250px) {
-  flex.container {
-    flex-direction: column;
-  }
-}
+
 
 /* inputs */
 .formulario-registro {
@@ -252,4 +254,10 @@ footer {
   background-color: #000;
   color: #ebebeb;
   font-size: 12px;
+}
+
+.cuadrado{
+
+  background-color: #39b54a; 
+  
 }
