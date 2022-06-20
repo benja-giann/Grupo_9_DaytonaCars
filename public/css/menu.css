@@ -6,8 +6,9 @@
 header label{
     float: right;
     font-size: 28px;
-    margin: 6px 0;
+    margin: 8px -55px;
     cursor:pointer;
+    margin-right: 10%;
 }
 
 .menu{
@@ -30,19 +31,47 @@ header label{
     border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
-.menu li:hover {
-    background-color: white(255,255,255,0.3);
+.menu a:hover {
+    background-color: rgba(255,255,255,0.3);
 }
 
 #menu-bar:checked ~ .menu{
-    transform: translate(0%);
+    transform: translateX(0%);
 }
 
 .icon-menu{
     background-color: white;
 }
 
-h1{
+/*h1{
     color: white;
-    float:left;
+    /*float:left;
+}*/
+
+@media (min-width:1024px){
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+
+    }
+
+    .menu a{
+        border: none;
+    }
+
+    header label{
+        display: none;
+    }
+
+    #blog .contenedor{
+        display: flex;
+        justify-content: center;
+        
+    }
+
 }
+    

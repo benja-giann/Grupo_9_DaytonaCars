@@ -1,6 +1,11 @@
 @import url("normalize.css");
 @import url(menu.css);
 @import url(main.css);
+@import url(banner.css);
+@import url(blog.css);
+@import url(footer.css);
+@import url(detalle-producto.css);
+
 
 * {
   margin: 0;
@@ -18,50 +23,33 @@ ul li a {
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
   background-color: rgb(243, 237, 237);
-}
-
-.banner2 {
-  height: 350px;
-  border: 3px solid black;
-  margin: auto;
-  object-fit: cover;
-  background-size: 100% 100%;
-
-  animation: banner2 10s infinite alternate;
-}
-
-@keyframes banner2 {
-  0%,
-  30% {
-    background-image: url(/images/bmw1.jpg);
-  }
-  35%,
-  65% {
-    background-image: url(/images/porche1.webp);
-  }
-  70%,
-  100% {
-    background-image: url(/images/ferrari6.jpg);
-  }
-}
-
-
-img {
-  width: 100%;
 }
 
 
 .productos {
-  padding: 90px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  padding: 15%;
+  margin-top: -10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-  /* flex-wrap: wrap;
-    width: 30%;
-    display: flex;  
-    flex-direction: row; */
+}
+
+
+.gondola1 h1{
+  color: black;
+  margin-left: 15%;
+}
+
+.gondola2 h1{
+  color: black;
+  margin-left: 15%;
+}
+
+.gondola3 h1{
+  color: black;
+  margin-left: 15%;
 }
 
 .articulo {
@@ -84,14 +72,8 @@ img {
 }
 
 
-
-main {
-  margin: auto;
-  width: 90%;
-}
-
 article {
-  width: 400px;
+  width: 300px;
   border: 1px #ebebeb solid;
   background-color: white;
 }
@@ -107,9 +89,9 @@ header {
   z-index: 100 ;
 }
 
-.pruebaHeader{
-  width: 98%;
-  margin:auto;
+.contenedor{
+  width: 85%;
+  
   display: table;
 }
 
@@ -173,7 +155,8 @@ i {
 
 .logo {
   float:left;
-  max-width: 44px;
+  width: 40px;
+  margin-left: 10%;
   
 }
 
@@ -183,9 +166,6 @@ i {
   color: #39b54a;
 }
 
-div {
-  text-align: center;
-}
 
 
 
@@ -224,40 +204,15 @@ div {
   color: white;
 }
 
-/*footer*/
-footer {
-  padding: 13%;
-  display: flex;
-  justify-content: space-evenly;
-  background-color: black;
+
+
+img {
+  width: 100%;
 }
 
-.linea {
-  border-color: #fff;
-}
-
-.divsFooter {
-  color: #fff;
-  background-color: #000;
-}
-
-.direcciones {
-  color: #ebebeb;
-}
-
-.piedefooter {
-  background-color: #000;
-}
-
-.holafooter {
-  display: flex;
-  background-color: #000;
-  color: #ebebeb;
-  font-size: 12px;
-}
-
-.cuadrado{
-
-  background-color: #39b54a; 
-  
+@media (min-width:1024px) {
+  .contenedor{
+    width: 85%;
+    background-color: black;
+  }
 }

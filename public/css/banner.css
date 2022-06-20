@@ -1,0 +1,43 @@
+.banner2 {
+    height: 30vh;
+    margin-bottom: 25px;
+    
+    margin-top: 50px;
+    object-fit: cover;
+    background-size: 100% 100%;
+  
+    animation: banner2 10s infinite alternate;
+
+    position: relative;
+    width: 101%;
+  }
+  
+  @keyframes banner2 {
+    0%,
+    30% {
+      background-image: url(/images/BMW-logotipo.jpg);
+    }
+    35%,
+    65% {
+      background-image: url(/images/logo-audi.jfif);
+    }
+    70%,
+    100% {
+      background-image: url(/images/logo-porsche.png);
+    }
+  }
+  
+
+
+  .texto-banner{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+  }
+
+  .texto-banner p{
+      color: #fff;
+      font-size: 28px;
+      font-style: italic;
+  }
