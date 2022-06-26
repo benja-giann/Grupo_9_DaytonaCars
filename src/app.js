@@ -16,6 +16,22 @@ app.get("/productos", (req, res) => res.sendFile(path.join(__dirname, "views", "
 
 app.get("/detalle-producto", (req, res) => res.sendFile(path.join(__dirname, "views", "detalle-producto.html")));
 
+app.get("/detalle-producto2", (req, res)=> res.sendFile(path.join(__dirname,"views","detalle-producto2.html")));
+
+app.get("/detalle-producto3", (req, res)=> res.sendFile(path.join(__dirname,"views","detalle-producto3.html")));
+
+app.get("/detalle-producto4", (req, res)=> res.sendFile(path.join(__dirname,"views","detalle-producto4.html")));
+
+app.get("/detalle-producto5", (req, res)=> res.sendFile(path.join(__dirname,"views","detalle-producto5.html")));
+
+app.get("/detalle-producto6", (req, res)=> res.sendFile(path.join(__dirname,"views","detalle-producto6.html")));
+
+app.get("/detalle-producto7", (req, res)=> res.sendFile(path.join(__dirname,"views","detalle-producto7.html")));
+
+app.get("/detalle-producto8", (req, res)=> res.sendFile(path.join(__dirname,"views","detalle-producto8.html")));
+
+app.get("/detalle-producto9", (req, res)=> res.sendFile(path.join(__dirname,"views","detalle-producto9.html")));
+
 app.get("/servicios", (req, res) => res.sendFile(path.join(__dirname, "views", "servicios.html")));
 
 app.get("/ayuda", (req, res) => res.sendFile(path.join(__dirname, "views", "ayuda.html")));
