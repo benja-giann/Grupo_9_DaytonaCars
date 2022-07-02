@@ -1,91 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daytona</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2? family=Lato:wght@300&family=Roboto+Mono:wght@100&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
-        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
+<%-include("partials/head.ejs")%>
 <body>
-    <header>
-        <div class="pruebaHeader">
-            
-            <h1><img src="/images/logo.jpeg" class="logo">Daytona</h1>
-            <input type="checkbox" id="menu-bar">
-            <label class="icon-menu" for="menu-bar"><i class="fa-solid fa-bars"></i></label>
-
-        <nav class="menu">
-            <ul>
-                <li><a href="/servicios">Servicio al Cliente</a></li>
-                <li><a href="/productos">Autos</a></li>
-                <li><a href="/ayuda">Ayuda</a></li>
-                <li class="right"><a href="/register">Crea tu cuenta <i class="fa-solid fa-user"></i></a></li>
-                <li class="right"><a href="/login">Ingresa <i class="fa-solid fa-user-check"></i></a></li>
-                <li class="right"><a href="/carrito">Carrito<i class="fa-solid fa-basket-shopping"></i></a></li>
-            </ul>
-            
-        </nav>
-    </div>
-    </header>
+    <%-include("partials/header.ejs") %>
     <div class="banner2">
     </div>
-
-
-
-    <footer>
-        <div class="divsFooter">
-            <strong>Daytona</strong>
-            <br>
-            <br>
-            <a href="/nuestraEmpresa" class="direcciones"> Empresa</a>
-            <br>
-            <a href="/sucursales" class="direcciones">Sucursales</a>
-        </div>
-        <div class="divsFooter"><strong>Servio al Cliente</strong>
-            <br>
-            <br>
-            <a href="/asesoramiento" class="direcciones">Asesoramiento</a>
-            <br>
-            <a href="/solicitudTestDrive" class="direcciones">Solicitud de Test Drive </a>
-            <br>
-        </div>
-        <div class="divsFooter"> <strong>Redes Sociales </strong>
-            <br>
-            <br>
-            <a href="https://www.facebook.com" class="direcciones">Facebook</a>
-            <br>
-            <a href="https://www.instagram.com" class="direcciones">instagram</a>
-            <br>
-            <a href="https://www.twitter.com" class="direcciones">twitter</a>
-            <br>
-        </div>
-        <div class="divsFooter"> <strong>Modelos</strong>
-            <br>
-            <a href="/login" class="direcciones">Electricos</a>
-            <br>
-            <a href="/login" class="direcciones">Hibridos</a>
-            <br>
-            <a href="/login" class="direcciones">Gasoleros</a>
-            <br>
-            <a href="/login" class="direcciones">Nafteros</a>
-        </div>
-        <div></div>
-        </section>
-    </footer>
-    <div class="piedefooter">
-        <p class="holafooter">Copyright © 2000-2022 Daytona S.R.L.</p>
-    </div>
+    <%-include("partials/footer.ejs") %>
 </body>
 
 </html>

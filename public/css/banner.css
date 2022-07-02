@@ -15,7 +15,7 @@
   @keyframes banner2 {
     0%,
     30% {
-      background-image: url(/images/BMW-logotipo.jpg);
+      background-image: url(/images/bmwbanner.jpg);
     }
     35%,
     65% {
@@ -23,7 +23,7 @@
     }
     70%,
     100% {
-      background-image: url(/images/logo-porsche.png);
+      background-image: url(/images/porsche4k.jpg);
     }
   }
   

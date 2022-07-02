@@ -19,5 +19,4 @@ app.use("/", indexRouter);
 app.use("/productos", productosRouter);
 app.use("/users", userRouter);
 
-
 app.listen(port, () => console.log("estoy funcionando en el puerto " + port));
