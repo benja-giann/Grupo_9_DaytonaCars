@@ -5,6 +5,31 @@ const controller = {
     detalle: (req, res) => {
         return res.render("detalle");
     },
+    detalle2: (req, res) => {
+        return res.render("detalle2");
+    },
+    detalle3: (req, res) => {
+        return res.render("detalle3");
+    },
+    detalle4: (req, res) => {
+        return res.render("detalle4");
+    },
+    detalle5: (req, res) => {
+        return res.render("detalle5");
+    },
+    detalle6: (req, res) => {
+        return res.render("detalle6");
+    },
+    detalle7: (req, res) => {
+        return res.render("detalle7");
+    },
+    detalle8: (req, res) => {
+        return res.render("detalle8");
+    },
+    detalle9: (req, res) => {
+        return res.render("detalle9");
+    },
+
     carrito: (req, res) => {
         return res.render("carrito");
     },

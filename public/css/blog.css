@@ -1,11 +1,7 @@
-#blog .contenedor{
-    text-align: center;
-    
+#blog .contenedor {
+    display: flex;
     justify-content: center;
-    background-color: white;
-    padding: 10%;
-    
-    
+    text-align: center;
 }
 
 
