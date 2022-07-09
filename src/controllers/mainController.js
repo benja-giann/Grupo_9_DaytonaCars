@@ -30,6 +30,10 @@ const controller = {
         return res.render("detalle9");
     },
 
+    pago: (req, res)=> {
+        return res.render("pago");
+    },
+
     carrito: (req, res) => {
         return res.render("carrito");
     },

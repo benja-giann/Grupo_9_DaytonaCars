@@ -30,6 +30,9 @@ router.get('/detalle9', mainController.detalle9);
 
 router.get('/servicios', mainController.servicios);
 
+router.get('/pago', mainController.pago);
+
 router.get('/ayuda', mainController.ayuda);
+
 
 module.exports = router;

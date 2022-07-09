@@ -6,6 +6,7 @@
 @import url(footer.css);
 @import url(detalle-producto.css);
 @import url(carrito.css);
+@import url(pagos.css);
 
 *{
   margin: 0;
