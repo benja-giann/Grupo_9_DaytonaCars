@@ -35,4 +35,6 @@ router.get('/pago', mainController.pago);
 router.get('/ayuda', mainController.ayuda);
 
 
+
+
 module.exports = router;
