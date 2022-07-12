@@ -53,7 +53,7 @@ header label{
         position: static;
         width: auto;
         height: auto;
-        transform: translateX(0%);
+        transform: translateX(25%);
         float: right;
         display: flex;
 
