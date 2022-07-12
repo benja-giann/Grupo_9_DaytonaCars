@@ -1,10 +1,20 @@
 <%-include("partials/head.ejs")%>
+<<<<<<< HEAD
+
+   <body>
+      <header>
+         <div class="pruebaHeader">
+=======
 <body>
   <%-include('partials/header.ejs')%>
    <div class="banner2">
+>>>>>>> 91879e7e0667bea1d22caf99db1d15eed7ef0eb3
 
-   </div>
+            <img src="/images/logo.jpeg" class="logo">
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"><i class="fa-solid fa-bars"></i></label>
 
+<<<<<<< HEAD
    <main>
 
    <section class="gondola1">
@@ -20,90 +30,132 @@
          <p class="desc-descripcion">40% off</p>
          <h4 class="descripcion">BMW X6</h4>
       </article>
+=======
+            <nav class="menu">
+               <ul>
+                  <li><a href="/servicios">Servicio al Cliente</a></li>
+                  <li><a href="/productos">Autos</a></li>
+                  <li><a href="/ayuda">Ayuda</a></li>
+                  <li class="right"><a href="/register">Crea tu cuenta <i class="fa-solid fa-user"></i></a></li>
+                  <li class="right"><a href="/login">Ingresa <i class="fa-solid fa-user-check"></i></a></li>
+                  <li class="right"><a href="/carrito">Carrito<i class="fa-solid fa-basket-shopping"></i></a></li>
+               </ul>
 
-      <article class="articulo">
-         <a href="/detalle2"><img src="/images/bmw2.jpg" alt=></a>
-         <p class="camion">
-            <i2 class="fa-solid fa-truck"></i2>
-         </p>
-         <p class="precios">$230.000</p>
-         <p class="desc-descripcion">20% off</p>
-         <h4 class="descripcion">BMW M4</h4>
-      </article>
+            </nav>
+         </div>
+      </header>
+      <div class="banner2">
+>>>>>>> 6e2f41d6e8eaf500993d84b46f042a76e022b27b
 
-      <article class="articulo">
-         <a href="/detalle3"><img src="/images/bmw3.jpg" alt=></a>
-         <p class="camion">
-            <i2 class="fa-solid fa-truck"></i2>
-         </p>
-         <p class="precios">$330.000</p>
-         <p class="desc-descripcion">20% off</p>
-         <h4 class="descripcion">BMW S5</h4>
-      </article>
       </div>
-   </section>
-      
-      <section class="gondola2">
-      <h1>AUDI</h1>
-      <div class="productos">
-         
-      <article class="articulo">
-         <a href="/detalle4"><img src="/images/audiE-Tron.jpg" alt=></a>
-         <p class="camion">
-            <i2 class="fa-solid fa-truck"></i2>
-         </p>
-         <p class="precios">$330.000</p>
-         <p class="desc-descripcion">20% off</p>
-         <h4 class="descripcion">Audi E-Tron</h4>
-      </article>
 
-      <article class="articulo">
-         <a href="/detalle5"><img src="/images/audiR8.jpg" alt=></a>
-         <p class="camion">
-            <i2 class="fa-solid fa-truck"></i2>
-         </p>
-         <p class="precios">$350.750</p>
-         <p class="desc-descripcion">10% off</p>
-         <h4 class="descripcion">Audi R8</h4>
-      </article>
+      <section class="gondola1">
 
-      <article class="articulo">
-         <a href="/detalle6"><img src="/images/audittrs.jpg" alt=></a>
-         <p class="camion">
-            <i2 class="fa-solid fa-truck"></i2>
-         </p>
-         <p class="precios">$325.200</p>
-         <p class="desc-descripcion">5% off</p>
-         <h4 class="descripcion">Audi TT RS</h4>
-      </article>
-       </div>
+         <h1>BMW</h1>
+         <div class="productos">
+
+            <% productos.map(producto=> { %>
+               <% if (producto.marca === 'BMW') { %>
+                  <article class="articulo">
+                     <a href="/detalle"><img src=<%=producto.imagen %> alt="BMW"></a>
+                     <h4 class="descripcion">
+                        <%=producto.name %>
+                     </h4>
+                     <p class="camion">
+                        <i2 class="fa-solid fa-truck"></i2>
+                     </p>
+                     <p class="precios">
+                       $ <%= producto.precio %>
+                     </p>
+                     <p class="desc-descripcion">
+                        <%=producto.descuento%>
+                     </p>
+                  </article>
+               <% } %>
+               <%}) %>
+                  <!-- <article class="articulo">
+                     <a href="/detalle"><img src="/images/bmw1.jpg" alt="BMW"></a>
+                     <p class="camion">
+                        <i2 class="fa-solid fa-truck"></i2>
+                     </p>
+                     <p class="precios">$350.000</p>
+                     <p class="desc-descripcion">40% off</p>
+                     <h4 class="descripcion">BMW X6</h4>
+                  </article> -->
+
+                  <!-- <article class="articulo">
+                     <a href="/detalle2"><img src="/images/bmw2.jpg" alt=></a>
+                     <p class="camion">
+                        <i2 class="fa-solid fa-truck"></i2>
+                     </p>
+                     <p class="precios">$230.000</p>
+                     <p class="desc-descripcion">20% off</p>
+                     <h4 class="descripcion">BMW M4</h4>
+                  </article> -->
+
+                  <!-- <article class="articulo">
+                     <a href="/detalle3"><img src="/images/bmw3.jpg" alt=></a>
+                     <p class="camion">
+                        <i2 class="fa-solid fa-truck"></i2>
+                     </p>
+                     <p class="precios">$330.000</p>
+                     <p class="desc-descripcion">20% off</p>
+                     <h4 class="descripcion">BMW S5</h4>
+                  </article> -->
+         </div>
       </section>
-      
+
+      <section class="gondola2">
+         <h1>AUDI</h1>
+         <div class="productos">
+
+            <article class="articulo">
+               <a href="/detalle4"><img src="/images/audiE-Tron.jpg" alt=></a>
+               <p class="camion">
+                  <i2 class="fa-solid fa-truck"></i2>
+               </p>
+               <p class="precios">$330.000</p>
+               <p class="desc-descripcion">20% off</p>
+               <h4 class="descripcion">Audi E-Tron</h4>
+            </article>
+
+            <article class="articulo">
+               <a href="/detalle5"><img src="/images/audiR8.jpg" alt=></a>
+               <p class="camion">
+                  <i2 class="fa-solid fa-truck"></i2>
+               </p>
+               <p class="precios">$350.750</p>
+               <p class="desc-descripcion">10% off</p>
+               <h4 class="descripcion">Audi R8</h4>
+            </article>
+
+            <article class="articulo">
+               <a href="/detalle6"><img src="/images/audittrs.jpg" alt=></a>
+               <p class="camion">
+                  <i2 class="fa-solid fa-truck"></i2>
+               </p>
+               <p class="precios">$325.200</p>
+               <p class="desc-descripcion">5% off</p>
+               <h4 class="descripcion">Audi TT RS</h4>
+            </article>
+         </div>
+      </section>
+
       <section class="gondola3">
-      <h1>PORSCHE</h1><br>
-   <div class="productos">
-      
-      <article class="articulo">
-         <a href="/detalle7"><img src="/images/porche1.webp" alt=></a>
-         <p class="camion">
-            <i2 class="fa-solid fa-truck"></i2>
-         </p>
-         <p class="precios">$300.000</p>
-         <p class="desc-descripcion">40% off</p>
-         <h4 class="descripcion">Porsche 911</h4>
-      </article>
+         <h1>PORSCHE</h1><br>
+         <div class="productos">
 
-       <article class="articulo">
-         <a href="/detalle8"><img src="/images/porche2.jpg" alt=></a>
-         
-         <p class="camion">
-            <i2 class="fa-solid fa-truck"></i2>
-         </p>
-         <p class="precios">$330.000</p>
-         <p class="desc-descripcion">20% off</p>
-         <h4 class="descripcion">Porsche 356</h4>
-      </article>
+            <article class="articulo">
+               <a href="/detalle7"><img src="/images/porche1.webp" alt=></a>
+               <p class="camion">
+                  <i2 class="fa-solid fa-truck"></i2>
+               </p>
+               <p class="precios">$300.000</p>
+               <p class="desc-descripcion">40% off</p>
+               <h4 class="descripcion">Porsche 911</h4>
+            </article>
 
+<<<<<<< HEAD
       <article class="articulo">
          <a href="/detalle9"><img src="/images/porche3.jpg" alt=></a>
          <p class="camion">
@@ -114,11 +166,115 @@
          <h4 class="descripcion">Porsche Panamera</h4>
        </article>
        </div>
+=======
+            <article class="articulo">
+               <a href="/detalle8"><img src="/images/porche2.jpg" alt=></a>
+
+               <p class="camion">
+                  <i2 class="fa-solid fa-truck"></i2>
+               </p>
+               <p class="precios">$330.000</p>
+               <p class="desc-descripcion">20% off</p>
+               <h4 class="descripcion">Porsche 356</h4>
+            </article>
+
+            <article class="articulo">
+               <a href="/detalle9"><img src="/images/porche3.jpg" alt=></a>
+               <p class="camion">
+                  <i2 class="fa-solid fa-truck"></i2>
+               </p>
+               <p class="precios">$530.570</p>
+               <p class="desc-descripcion">20% off</p>
+               <h4 class="descripcion">Porsche Panamera</h4>
+            </article>
+
+
+         </div>
+>>>>>>> 6e2f41d6e8eaf500993d84b46f042a76e022b27b
       </section>
        </main>
 
     <%-include("partials/footer.ejs")%>
 
+<<<<<<< HEAD
 </body>
 
 </html>
+=======
+
+      <footer>
+         <div class="divsFooter">
+            <strong>Daytona</strong>
+            <br>
+            <br>
+            <a href="/nuestraEmpresa" class="direcciones"> Empresa</a>
+            <br>
+            <a href="/sucursales" class="direcciones">Sucursales</a>
+         </div>
+         <div class="divsFooter"><strong>Servio al Cliente</strong>
+            <br>
+            <br>
+            <a href="/asesoramiento" class="direcciones">Asesoramiento</a>
+            <br>
+            <a href="/solicitudTestDrive" class="direcciones">Solicitud de Test Drive </a>
+            <br>
+         </div>
+         <div class="divsFooter"> <strong>Redes Sociales </strong>
+            <br>
+            <br>
+            <a href="https://www.facebook.com" class="direcciones">Facebook</a>
+            <br>
+            <a href="https://www.instagram.com" class="direcciones">instagram</a>
+            <br>
+            <a href="https://www.twitter.com" class="direcciones">twitter</a>
+            <br>
+         </div>
+         <div class="divsFooter"> <strong>Modelos</strong>
+            <br>
+            <a href="/login" class="direcciones">Electricos</a>
+            <br>
+            <a href="/login" class="direcciones">Hibridos</a>
+            <br>
+            <a href="/login" class="direcciones">Gasoleros</a>
+            <br>
+            <a href="/login" class="direcciones">Nafteros</a>
+         </div>
+         </section>
+      </footer>
+      <div class="piedefooter">
+         <p class="holafooter">Copyright © 2000-2022 Daytona S.R.L.</p>
+      </div>
+   </body>
+
+   </html>
+   <!--<yo class="fa-brands fa-facebook-square"></yo>
+   <yo class="fa-marcas fa-instagram-cuadrado"></yo>
+   <yo class="fa-brands fa-twitter-square"></yo>
+-->
+
+   <!--<section class="sectionFooter">*/
+         <div class="divsFooter">
+            <strong>Daytona Cars</strong>
+            <br>
+               <a href="/nuestraEmpresa" class="direcciones"> Empresa</a>
+               <br>
+               <a href="/sucursales" class="direcciones">Sucursales</a>
+         </div>
+         <div class="divsFooter"><strong>Contactenos</strong>
+            <br>
+               <a href="/asesoramiento" class="direcciones">Asesoramiento</a>
+               <br>
+               <a href="/solicitudTestDrive" class="direcciones">Solicitud de Test Drive </a>
+               <br>
+         </div>
+         <div class="divsFooter"> <strong>Redes Sociales </strong>
+            <br>
+               <a href="https://www.facebook.com" class="direcciones">Facebook</a>
+                  <br>
+                  <a href="https://www.instagram.com" class="direcciones">instagram</a>
+                     <br>
+                     <a href="https://www.twitter.com" class="direcciones">twitter</a>
+         </div>
+
+      </section>
+>>>>>>> 6e2f41d6e8eaf500993d84b46f042a76e022b27b
