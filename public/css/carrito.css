@@ -2,10 +2,10 @@
     
 }
 
-.contenedor-datos-para-pago {
+/*.contenedor-datos-para-pago {
     display: flex;
     align-items: center;
-}
+}*/
 
 .datos-auto-para-pagar {
     display: flex;
@@ -39,4 +39,10 @@
 
 .boton-vaciar{
     padding: 50px;
+}
+
+@media (min-width:1024px){
+    .contenedor-datos-para-pago{
+        display: flex;
+    }
 }
