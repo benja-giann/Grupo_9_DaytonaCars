@@ -1,8 +1,13 @@
 const router = require("../routes/mainRoutes");
+const productos = require('../../data/productos.json');
 
 let productosController = {
-    listado: function(req, res) {res.send ("vistado de listado")},
-    crear: function(req, res) {res.send("creacion de productos")},
+    listado: function(req, res) {res.send (productos)},
+    crear: function(req, res) {
+        // Aqui vas a handle tu POST request para la creacion de carros
+        console.log(req);
+        res.send("creacion de productos")
+    },
     detalle: function(req, res){
         res.send("Bienvenidos al detalle del producto" + req.params.idProducto);
     },

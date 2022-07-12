@@ -1,14 +1,8 @@
 <%-include("partials/head.ejs")%>
-<<<<<<< HEAD
 
    <body>
       <header>
          <div class="pruebaHeader">
-=======
-<body>
-  <%-include('partials/header.ejs')%>
-   <div class="banner2">
->>>>>>> 91879e7e0667bea1d22caf99db1d15eed7ef0eb3
 
             <img src="/images/logo.jpeg" class="logo">
             <input type="checkbox" id="menu-bar">
@@ -27,17 +21,71 @@
             </nav>
          </div>
       </header>
-      <div class="banner2">
+     <div class="banner2">
 
       </div>
 
-      <section class="gondola1">
+     <section class="gondola1">
 
-         <h1>BMW</h1>
+      <h1>BMW</h1>
+      <div class="productos">
+
+       <% productos.map(producto=> { %>
+          <% if (producto.marca === "BMW") { %>
+                  <article class="articulo">
+                     <a href="/detalle"><img src=<%=producto.imagen %> alt="BMW"></a>
+                     <h4 class="descripcion">
+                        <%=producto.name %>
+                     </h4>
+                     <p class="camion">
+                        <i2 class="fa-solid fa-truck"></i2>
+                     </p>
+                     <p class="precios">
+                       $ <%= producto.precio %>
+                     </p>
+                     <p class="desc-descripcion">
+                        <%=producto.descuento%>
+                     </p>
+                  </article>
+               <% } %>
+               <%}) %>       
+         </div>
+      </section>
+
+      <section class="gondola2">
+         <h1>AUDI</h1>
+         
+         <div class="productos">
+
+            
+            <% productos.map(producto=> { %>
+               <% if (producto.marca === 'AUDI') { %>
+            <article class="articulo">
+               <a href="/detalle"><img src=<%=producto.imagen %> alt="AUDI"></a>
+                     <h4 class="descripcion">
+                        <%=producto.name %>
+                     </h4>
+                     <p class="camion">
+                        <i2 class="fa-solid fa-truck"></i2>
+                     </p>
+                     <p class="precios">
+                       $ <%= producto.precio %>
+                     </p>
+                     <p class="desc-descripcion">
+                        <%=producto.descuento%>
+                     </p>
+                  </article>
+               <% } %>
+               <%}) %>
+            </div>
+             </section> 
+
+      <section class="gondola3">
+         <h1>PORSCHE</h1><br>
          <div class="productos">
 
             <% productos.map(producto=> { %>
-               <% if (producto.marca === 'BMW') { %>
+               <% if (producto.marca === "PORSCHE") { %>
                   <article class="articulo">
                      <a href="/detalle"><img src=<%=producto.imagen %> alt="BMW"></a>
                      <h4 class="descripcion">
@@ -55,79 +103,9 @@
                   </article>
                <% } %>
                <%}) %>
-                  <!-- <article class="articulo">
-                     <a href="/detalle"><img src="/images/bmw1.jpg" alt="BMW"></a>
-                     <p class="camion">
-                        <i2 class="fa-solid fa-truck"></i2>
-                     </p>
-                     <p class="precios">$350.000</p>
-                     <p class="desc-descripcion">40% off</p>
-                     <h4 class="descripcion">BMW X6</h4>
-                  </article> -->
 
-                  <!-- <article class="articulo">
-                     <a href="/detalle2"><img src="/images/bmw2.jpg" alt=></a>
-                     <p class="camion">
-                        <i2 class="fa-solid fa-truck"></i2>
-                     </p>
-                     <p class="precios">$230.000</p>
-                     <p class="desc-descripcion">20% off</p>
-                     <h4 class="descripcion">BMW M4</h4>
-                  </article> -->
 
-                  <!-- <article class="articulo">
-                     <a href="/detalle3"><img src="/images/bmw3.jpg" alt=></a>
-                     <p class="camion">
-                        <i2 class="fa-solid fa-truck"></i2>
-                     </p>
-                     <p class="precios">$330.000</p>
-                     <p class="desc-descripcion">20% off</p>
-                     <h4 class="descripcion">BMW S5</h4>
-                  </article> -->
-         </div>
-      </section>
-
-      <section class="gondola2">
-         <h1>AUDI</h1>
-         <div class="productos">
-
-            <article class="articulo">
-               <a href="/detalle4"><img src="/images/audiE-Tron.jpg" alt=></a>
-               <p class="camion">
-                  <i2 class="fa-solid fa-truck"></i2>
-               </p>
-               <p class="precios">$330.000</p>
-               <p class="desc-descripcion">20% off</p>
-               <h4 class="descripcion">Audi E-Tron</h4>
-            </article>
-
-            <article class="articulo">
-               <a href="/detalle5"><img src="/images/audiR8.jpg" alt=></a>
-               <p class="camion">
-                  <i2 class="fa-solid fa-truck"></i2>
-               </p>
-               <p class="precios">$350.750</p>
-               <p class="desc-descripcion">10% off</p>
-               <h4 class="descripcion">Audi R8</h4>
-            </article>
-
-            <article class="articulo">
-               <a href="/detalle6"><img src="/images/audittrs.jpg" alt=></a>
-               <p class="camion">
-                  <i2 class="fa-solid fa-truck"></i2>
-               </p>
-               <p class="precios">$325.200</p>
-               <p class="desc-descripcion">5% off</p>
-               <h4 class="descripcion">Audi TT RS</h4>
-            </article>
-         </div>
-      </section>
-
-      <section class="gondola3">
-         <h1>PORSCHE</h1><br>
-         <div class="productos">
-
-            <article class="articulo">
+            <!--<article class="articulo">
                <a href="/detalle7"><img src="/images/porche1.webp" alt=></a>
                <p class="camion">
                   <i2 class="fa-solid fa-truck"></i2>
@@ -156,7 +134,7 @@
                <p class="precios">$530.570</p>
                <p class="desc-descripcion">20% off</p>
                <h4 class="descripcion">Porsche Panamera</h4>
-            </article>
+            </article>-->
 
 
          </div>
