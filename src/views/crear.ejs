@@ -1,11 +1,45 @@
 <%-include("partials/header.ejs")%>
 <%-include("partials/head.ejs")%>
 
-<body>
-    <div>Agreagar aca formulario para crear carros</div>´
-    en el boton vas a hacer un POST reuquest a localhost:5500/api/productos
-<%-include("partials/footer.ejs")%>
 
+<body>
+<main>
+
+    <div class="main-registro">
+
+        <section class="formulario-crear">
+          <form action="/productos/Crear"></form>
+          <input class="input" type="text" name="Nombre" placeholder="Nombre del vehiculo" id="formulario-nombre-vehiculo"></input>
+    
+          <input class="input" type="text" name="precio" placeholder="precio del vehiculo"
+            id="formulario-precio-vehiculo"></input>
+
+          <input class="input" type="text" name="ficha-tecnica" placeholder="ficha tecnica"
+            id="formulario-ficha-tecnica"></input>
+
+
+          <input class="input" type="text" name="marca" placeholder="marca"
+            id="formulario-marca"></input>
+            <div class="input-contaier">
+                <label>Seleccionar la imagen del vehiculo a vender</label>
+                <input class="input" type="file" name="avatar" accept="jpg" multiple>
+            </div>
+            
+
+          
+    
+          <div>
+            <button class="button" type="reset">Agregar producto</button>
+            <button class="button" type="submit">Reset</button>
+          </div>
+        </section>
+        </div>
+
+</main>
+
+    
+
+<%-include("partials/footer.ejs")%>
 </body>
 
 

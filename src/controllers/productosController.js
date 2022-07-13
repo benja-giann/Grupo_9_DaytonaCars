@@ -4,7 +4,7 @@ const productos = require('../../data/productos.json');
 let productosController = {
     listado: function(req, res) {res.send (productos)},
     crear: function(req, res) {
-        // Aqui vas a handle tu POST request para la creacion de carros
+        // Aqui vas a manejar tu pedido del POST para la creacion de carros
         console.log(req);
         res.send("creacion de productos")
     },
