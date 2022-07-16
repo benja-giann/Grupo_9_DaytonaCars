@@ -8,6 +8,8 @@ let productosController = {
         console.log(req);
         res.send("creacion de productos")
     },
+
+    // revisar la clase de rutas parametrizadas - como enviar un parametro por la ruta, revisar clase en vivo 2 CRUD episodio uno 
     detalle: function(req, res){
         res.send("Bienvenidos al detalle del producto" + req.params.idProducto);
     },
