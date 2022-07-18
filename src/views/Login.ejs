@@ -1,26 +1,59 @@
 <%-include("partials/head.ejs")%>
+<script>
+  window.addEventListener("load", function() {
+    let formulario = document.querySelector(".formulario-registro")
+    
+    formulario.addEventListener("submit", function(e) {
+      e.preventDefault()
+
+      let email = document.querySelector("#email")
+      let password = document.querySelector("#password")
+      let errors = []
+
+      if(email.value === "") {
+        errors.push("Correo electronico requerido");
+      }
+      
+      if(password.value === "") {
+        errors.push("Contraseña requerida");
+      }
+
+      if (errors[0]) {
+        let errorDiv = document.querySelector("#errorList")
+        for (let i = 0; i < errors.length; i++) {
+          errorDiv.innerHTML += "<p>" + errors[i] + "</p>"
+        }
+      } else {
+        formulario.submit();
+      }
+    })
+  })
+</script>
 
 <body>
     <%-include("partials/header.ejs") %>
 
-    <div class="banner2">
+    <div class="banner2"></div>
 
-    </div>
-
-
-    <main class="main">
+    <main class="main-registro">
         <section class="registro-con-correo">
-            <br>
-            <form class="registro-con-correo-a" action="/login" method="post">
-                <input type="email" name="email" placeholder="ingrese su correo electronico" id="ingreso-correo">
-                <br>
-                <input type="text" name="contraseña" placeholder="ingrese su contraseña" id="ingreso-contraseña">
-            </form>
-            
-        
-        <div class="boton-enviar">
-            <button type="submit">Ingresar</button>
-        </div>
+            <div id="errorList"></div>
+            <form class="formulario-registro" action="/users/login" method="POST">
+                <div>
+                  <label for="name">Correo Electronico</label>
+                  <br />
+                  <input class="input" type="email" name="email" id="email" />
+                </div>
+                <div>
+                  <label for="name">Contraseña</label>
+                  <br />
+                  <input class="input" type="password" name="password" id="password"/>
+                </div>
+
+                <div class="button-container">
+                  <button class="button" type="submit">Ingresar</button>
+                </div>
+              </form>
     </main>
 
     <%-include("partials/footer.ejs") %>

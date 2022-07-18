@@ -1,17 +1,16 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
-const mainController = require("../controllers/mainController");
+const mainController = require('../controllers/mainController');
 
-
-router.get("/", mainController.home);
+router.get('/', mainController.home);
 
 router.get('/carrito', mainController.carrito);
 
-router.get('/productos', mainController.productos);
-router.get('/productos/crear', mainController.crearProductos);
+// router.get('/productos', mainController.productos);
+// router.get('/productos/crear', mainController.crearProductos);
 
-router.get('/detalle', mainController.detalle);
+// router.get('/detalle', mainController.detalle);
 
 router.get('/detalle2', mainController.detalle2);
 
@@ -34,8 +33,5 @@ router.get('/servicios', mainController.servicios);
 router.get('/pago', mainController.pago);
 
 router.get('/ayuda', mainController.ayuda);
-
-
-
 
 module.exports = router;

@@ -7,8 +7,10 @@
 @import url(detalle-producto.css);
 @import url(carrito.css);
 @import url(pagos.css);
+@import url(productos.css);
 @import url(register.css);
 @import url(crear.css);
+@import url(historial.css);
 
 
 *{
@@ -118,6 +120,13 @@ p {
 
 .camion {
   text-align: right;
+}
+
+.camion i {
+
+    height: 40px;
+    width: 40px;
+  
 }
 
 h2 {

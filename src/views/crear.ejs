@@ -1,45 +1,51 @@
-<%-include("partials/header.ejs")%>
-<%-include("partials/head.ejs")%>
-
+<%-include("partials/header.ejs")%> <%-include("partials/head.ejs")%>
 
 <body>
-<main>
-
+  <main>
     <div class="main-registro">
-
-        <section class="formulario-crear">
-          <form action="/productos/Crear"></form>
-          <input class="input" type="text" name="Nombre" placeholder="Nombre del vehiculo" id="formulario-nombre-vehiculo"></input>
-    
-          <input class="input" type="text" name="precio" placeholder="precio del vehiculo"
-            id="formulario-precio-vehiculo"></input>
-
-          <input class="input" type="text" name="ficha-tecnica" placeholder="ficha tecnica"
-            id="formulario-ficha-tecnica"></input>
-
-
-          <input class="input" type="text" name="marca" placeholder="marca"
-            id="formulario-marca"></input>
-            <div class="input-contaier">
-                <label>Seleccionar la imagen del vehiculo a vender</label>
-                <input class="input" type="file" name="avatar" accept="jpg" multiple>
-            </div>
-            
-
-          
-    
+      <section>
+        <form class="formulario-crear" action="/carros/crear" method="POST">
           <div>
-            <button class="button" type="reset">Agregar producto</button>
-            <button class="button" type="submit">Reset</button>
+            <label for="name">Nombre del vehiculo</label>
+            <br />
+            <input class="input" type="text" name="name" />
           </div>
-        </section>
-        </div>
+          <div>
+            <label for="ficha_tecnica">ficha tecnica</label>
+            <br />
+            <textarea name="ficha_tecnica" rows="4"></textarea>
+          </div>
+          <div>
+            <label for="marca">marca</label>
+            <br />
+            <select class="input" name="marca">
+              <option value="BMW">BMW</option>
+              <option value="AUDI">AUDI</option>
+              <option value="PORSCHE">PORSCHE</option>
+            </select>
+          </div>
+          <div>
+            <label for="descuento">descuento</label>
+            <br />
+            <input class="input" type="number" name="descuento" min="0" max="100" />% OFF
+          </div>
+          <div>
+            <label for="precio">precio</label>
+            <br />
+            <input class="input" type="number" name="precio" />
+          </div>
+          <!-- <div class="input-contaier">
+            <label>Seleccionar la imagen del vehiculo a vender</label>
+            <input class="input" type="file" name="imagen" accept="jpg" multiple />
+          </div> -->
+          <div class="button-container">
+            <button class="button" type="submit">Agregar producto</button>
+            <button class="button" type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
 
-</main>
-
-    
-
-<%-include("partials/footer.ejs")%>
+  <%-include("partials/footer.ejs")%>
 </body>
-
-

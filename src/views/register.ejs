@@ -9,31 +9,38 @@
   <main>
     <div class="main-registro">
 
-    <section class="formulario-registro">
-    
+    <section >
+      <% errors.forEach((error) => { %>
+        <p class="mensaje-error"><%= error.msg %></p>
+     <% }) %>
 
-      <div class="input-container">
-        <label for="fecha de nacimiento">Fecha de registro</label>
-        <input class="input" type="date" name="Fecha-de-registro" id=""></input>
-      </div>
-   
-      <input class="input" type="text" name="email" placeholder="ingrese su correo electronico"
-        id="formulario-correo-electronico"></input>
+      <form class="formulario-registro" action="/users/register" method="POST">
+        <div>
+          <label for="name">Nombre</label>
+          <br />
+          <input class="input" type="text" name="name" value="<%= locals.old && old.name ? old.name : "" %>"/>
+        </div>
+        <div>
+          <label for="name">Correo Electronico</label>
+          <br />
+          <input class="input" type="email" name="email" value="<%= locals.old && old.email ? old.email : "" %>"/>
+        </div>
+        <div>
+          <label for="name">Contraseña</label>
+          <br />
+          <input class="input" type="password" name="password" value="<%= locals.old && old.password ? old.password : "" %>"/>
+        </div>
+        <div>
+          <label for="name">Confirmar Contraseña</label>
+          <br />
+          <input class="input" type="password" name="comfirm" value="<%= locals.old && old.comfirm ? old.comfirm : "" %>"/>
+        </div>
 
-      <input class="input" type="password" name="contraseña" placeholder="Contraseña" id=""></input>
-
-      <input class="input" type="password" name="confirmacion_contraseña" placeholder="Confirmar contraseña"
-        id=""></input>
-
-      <div class="checkbox-container">
-        <input class="input" type="checkbox" name="aceptacion terminos y condiciones" value="accept" id=""></input>
-        <label for="aceptacion terminos y condiciones">Acepta terminos y condiciones</label>
-      </div>
-
-      <div>
-        <button class="button" type="reset">Reset</button>
-        <button class="button" type="submit">Crear cuenta</button>
-      </div>
+        <div class="button-container">
+          <button class="button" type="submit">Crear Cuenta</button>
+          <button class="button" type="reset">Reset</button>
+        </div>
+      </form>
     </section>
     </div>
   </main>

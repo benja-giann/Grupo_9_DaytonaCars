@@ -23,16 +23,14 @@
 }
 
 .main-detalle-producto{
-   /* border: solid 2px red;*/
     width: 100%;
-    /*height: 300px;*/
     background-color: white;
-    margin-top: 30%;
     margin-bottom: 5%;
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 
 .main-detalle-producto img{
-    height: 120vw;
     padding: 0 16px;
 }
 

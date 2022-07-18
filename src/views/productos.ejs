@@ -1,83 +1,40 @@
 <%-include("partials/head.ejs")%>
-<%-include("partials/header.ejs")%>
    <body>
-<<<<<<< HEAD
-      <header>
-         <div class="pruebaHeader">
+      <%-include ("partials/header.ejs") %>
 
-            <img src="/images/logo.jpeg" class="logo">
-            <input type="checkbox" id="menu-bar">
-            <label class="icon-menu" for="menu-bar"><i class="fa-solid fa-bars"></i></label>
-
-
-   <main>
-
-   <section class="gondola1">
-   
-      <h1>BMW</h1>
-   <div class="productos">
-       <article class="articulo">
-         <a href="/detalle"><img src="/images/bmw1.jpg" alt="BMW"></a>
-         <p class="camion">
-            <i2 class="fa-solid fa-truck"></i2>
-         </p>
-         <p class="precios">$350.000</p>
-         <p class="desc-descripcion">40% off</p>
-         <h4 class="descripcion">BMW X6</h4>
-      </article>
-
-            <nav class="menu">
-               <ul>
-                  <li><a href="/servicios">Servicio al Cliente</a></li>
-                  <li><a href="/productos">Autos</a></li>
-                  <li><a href="/ayuda">Ayuda</a></li>
-                  <li class="right"><a href="/register">Crea tu cuenta <i class="fa-solid fa-user"></i></a></li>
-                  <li class="right"><a href="/login">Ingresa <i class="fa-solid fa-user-check"></i></a></li>
-                  <li class="right"><a href="/carrito">Carrito<i class="fa-solid fa-basket-shopping"></i></a></li>
-               </ul>
-
-            </nav>
-         </div>
-      </header>
-<<<<<<< HEAD
      <div class="banner2">
-=======
-      <div class="banner2">
->>>>>>> 6e2f41d6e8eaf500993d84b46f042a76e022b27b
->>>>>>> 7df74c245ba3f80ca8ccb049206a7a7810070458
+   
 
-      </div>
-=======
-       
-             <div class="banner2">
->>>>>>> 85eeb77835bdf470af14de8a3cc4685346692b14
+    </div>
 
-             </div>
      <main>
+        <div class="create-container">
+           <a class="button" href="/carros/crear">Vender Auto</a>
+        </div>
      <section class="gondola1">
 
       <h1>BMW</h1>
       <div class="productos">
 
-       <% productos.map(producto=> { %>
-          <% if (producto.marca === "BMW") { %>
+      <% carros.map((carro) => { %>
+         <% if (carro.marca === "BMW" && carro.comprador === null) { %>
                   <article class="articulo">
-                     <a href="/detalle"><img src=<%=producto.imagen %> alt="BMW"></a>
+                     <a href="/carros/detalle/<%= carro.id %>"><img src="/images/bmw<%=carro.id % 3 + 1%>.jpg" alt="BMW"></a>
                      <h4 class="descripcion">
-                        <%=producto.name %>
+                        <%=carro.name %>
                      </h4>
                      <p class="camion">
                         <i2 class="fa-solid fa-truck"></i2>
                      </p>
                      <p class="precios">
-                       $ <%= producto.precio %>
+                       $ <%= carro.precio %>
                      </p>
                      <p class="desc-descripcion">
-                        <%=producto.descuento%>
+                        <%=carro.descuento%>% OFF
                      </p>
                   </article>
-               <% } %>
-               <%}) %>       
+         <% } %>
+      <%}) %>       
          </div>
       </section>
 
@@ -87,25 +44,25 @@
          <div class="productos">
 
             
-            <% productos.map(producto=> { %>
-               <% if (producto.marca === 'AUDI') { %>
-            <article class="articulo">
-               <a href="/detalle"><img src=<%=producto.imagen %> alt="AUDI"></a>
+            <% carros.map((carro) => { %>
+               <% if (carro.marca === 'AUDI') { %>
+                  <article class="articulo">
+                     <a href="/carros/detalle/<%= carro.id %>"><img src="/images/audi<%=carro.id % 3 + 1%>.jpg" alt="AUDI"></a>
                      <h4 class="descripcion">
-                        <%=producto.name %>
+                        <%=carro.name %>
                      </h4>
                      <p class="camion">
                         <i2 class="fa-solid fa-truck"></i2>
                      </p>
                      <p class="precios">
-                       $ <%= producto.precio %>
+                       $ <%= carro.precio %>
                      </p>
                      <p class="desc-descripcion">
-                        <%=producto.descuento%>
+                        <%=carro.descuento%>% OFF
                      </p>
                   </article>
                <% } %>
-               <%}) %>
+            <%}) %>
             </div>
              </section> 
 
@@ -113,21 +70,21 @@
          <h1>PORSCHE</h1><br>
          <div class="productos">
 
-            <% productos.map(producto=> { %>
-               <% if (producto.marca === "PORSCHE") { %>
+            <% carros.map((carro) => { %>
+               <% if (carro.marca === "PORSCHE") { %>
                   <article class="articulo">
-                     <a href="/detalle"><img src=<%=producto.imagen %> alt="BMW"></a>
+                     <a href="/carros/detalle/<%= carro.id %>"><img src="/images/porsche<%=carro.id % 3 + 1%>.jpg" alt="AUDI"></a>
                      <h4 class="descripcion">
-                        <%=producto.name %>
+                        <%=carro.name %>
                      </h4>
                      <p class="camion">
                         <i2 class="fa-solid fa-truck"></i2>
                      </p>
                      <p class="precios">
-                       $ <%= producto.precio %>
+                       $ <%= carro.precio %>
                      </p>
                      <p class="desc-descripcion">
-                        <%=producto.descuento%>
+                        <%=carro.descuento%>% OFF
                      </p>
                   </article>
                <% } %>

@@ -36,3 +36,7 @@
       padding: 4%;
       margin-left: 20%;
   }
+
+  .mensaje-error {
+    color: red
+  }
