@@ -13,14 +13,17 @@ const controller = {
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
-      });
-      res.redirect('/');
-    } else {
+      }).then((usuarioData) => {
+       const user = usuarioData.toJSON();
+        req.session.usuario =user;
+        res.cookie('usuario', user.id);
+       res.redirect('/users/perfil')})
+        } else {
       res.render('register', { errors: errors.array(), old: req.body });
     }
   },
   renderLogin: (req, res) => {
-    return res.render('login');
+    return res.render('login', {errors:[{msg:''}]});
   },
   login: (req, res) => {
     db.Usuarios.findAll({
@@ -28,9 +31,15 @@ const controller = {
         email: req.body.email,
       },
     }).then(function (usuario) {
-      req.session.usuario = usuario[0];
-      res.cookie('usuario', usuario[0]);
-      res.redirect('/');
+
+      if (usuario.length !==0) {
+        const user = JSON.stringify(usuario)[0];
+        req.session.usuario = user;
+        res.cookie('usuario', user['id']);
+        res.redirect('/');
+      } else {
+        res.render('login', {errors: [{msg:'Error, no se encontro usuario con ese correo'}]})
+      }
     });
   },
   logout: (req, res) => {
@@ -40,7 +49,14 @@ const controller = {
     res.redirect('/');
   },
   perfil: (req, res) => {
-    return res.render('perfil');
+    db.Carros.findAll({
+      where: {
+        comprador: req.session.usuario.id,
+      },
+    }).then((carros) => {
+      return res.render('perfilUsuario', {carros});
+    });
+    
   },
   historial: (req, res) => {
     db.Carros.findAll({

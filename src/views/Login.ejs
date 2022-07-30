@@ -35,6 +35,10 @@
 
     <div class="banner2"></div>
 
+    <% errors.forEach((error) => { %>
+      <p class="mensaje-error"><%= error.msg %></p>
+   <% }) %>
+
     <main class="main-registro">
         <section class="registro-con-correo">
             <div id="errorList"></div>
