@@ -15,8 +15,8 @@ const controller = {
         password: req.body.password,
       }).then((usuarioData) => {
        const user = usuarioData.toJSON();
-        req.session.usuario =user;
-        res.cookie('usuario', user.id);
+       req.session.usuario = user.id;
+       res.cookie('usuario', user['id']);
        res.redirect('/users/perfil')})
         } else {
       res.render('register', { errors: errors.array(), old: req.body });
@@ -26,16 +26,16 @@ const controller = {
     return res.render('login', {errors:[{msg:''}]});
   },
   login: (req, res) => {
-    db.Usuarios.findAll({
+    db.Usuarios.findOne({
       where: {
         email: req.body.email,
       },
     }).then(function (usuario) {
-
-      if (usuario.length !==0) {
-        const user = JSON.stringify(usuario)[0];
-        req.session.usuario = user;
-        res.cookie('usuario', user['id']);
+      if (usuario) {
+        const user = usuario.toJSON();
+        console.log('userrr', user.id)
+        req.session.usuario = user.id;
+        res.cookie('usuario', user);
         res.redirect('/');
       } else {
         res.render('login', {errors: [{msg:'Error, no se encontro usuario con ese correo'}]})
@@ -48,15 +48,28 @@ const controller = {
     res.locals.usuario = null;
     res.redirect('/');
   },
+
   perfil: (req, res) => {
-    db.Carros.findAll({
+
+    if (req.session.usuario) {
+     db.Carros.findAll({
       where: {
-        comprador: req.session.usuario.id,
+        comprador: req.session.usuario,
       },
-    }).then((carros) => {
-      return res.render('perfilUsuario', {carros});
-    });
+    }).then((carrosdata) => {
+        //const carros = JSON.stringify(carrosdata, null, 2)
+        return res.render('perfilUsuario', {carros:carrosdata})
+      });
     
+     // db.Usuarios.findOne({
+       // where: {
+       //   id: req.session.usuario,
+       // },
+      //}).then((datosDeUsuario) => {
+      //  return res.render('perfilUsuario', {datos:datosDeUsuario.toJSON()});
+      //});
+    }
+   // return res.render('perfilUsuario', {carros:[]});     
   },
   historial: (req, res) => {
     db.Carros.findAll({
