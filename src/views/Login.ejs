@@ -30,7 +30,7 @@
   })
 </script>
 
-<body>
+<body class="allBody">
     <%-include("partials/header.ejs") %>
 
     <div class="banner2"></div>
@@ -40,14 +40,12 @@
             <div id="errorList"></div>
             <form class="formulario-registro" action="/users/login" method="POST">
                 <div>
-                  <label for="name">Correo Electronico</label>
                   <br />
-                  <input class="input" type="email" name="email" id="email" />
+                  <input class="input" type="email" name="email" placeholder="Email" id="email" />
                 </div>
                 <div>
-                  <label for="name">Contraseña</label>
                   <br />
-                  <input class="input" type="password" name="password" id="password"/>
+                  <input class="input" type="password" name="password" placeholder="Contraseña" id="password"/>
                 </div>
 
                 <div class="button-container">

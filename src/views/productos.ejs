@@ -1,152 +1,109 @@
 <%-include("partials/head.ejs")%>
-   <body>
+
+   <body class="allBody">
       <%-include ("partials/header.ejs") %>
 
-     <div class="banner2">
-   
+         <div class="banner2">
 
-    </div>
 
-     <main>
-        <div class="create-container">
-           <a class="button" href="/carros/crear">Vender Auto</a>
-        </div>
-     <section class="gondola1">
-
-      <h1>BMW</h1>
-      <div class="productos">
-
-      <% carros.map((carro) => { %>
-         <% if (carro.marca === "BMW" && carro.comprador === null) { %>
-                  <article class="articulo">
-                     <a href="/carros/detalle/<%= carro.id %>"><img src="/images/bmw<%=carro.id % 3 + 1%>.jpg" alt="BMW"></a>
-                     <h4 class="descripcion">
-                        <%=carro.name %>
-                     </h4>
-                     <p class="camion">
-                        <i2 class="fa-solid fa-truck"></i2>
-                     </p>
-                     <p class="precios">
-                       $ <%= carro.precio %>
-                     </p>
-                     <p class="desc-descripcion">
-                        <%=carro.descuento%>% OFF
-                     </p>
-                  </article>
-         <% } %>
-      <%}) %>       
          </div>
-      </section>
 
-      <section class="gondola2">
-         <h1>AUDI</h1>
-         
-         <div class="productos">
-
-            
-            <% carros.map((carro) => { %>
-               <% if (carro.marca === 'AUDI') { %>
-                  <article class="articulo">
-                     <a href="/carros/detalle/<%= carro.id %>"><img src="/images/audi<%=carro.id % 3 + 1%>.jpg" alt="AUDI"></a>
-                     <h4 class="descripcion">
-                        <%=carro.name %>
-                     </h4>
-                     <p class="camion">
-                        <i2 class="fa-solid fa-truck"></i2>
-                     </p>
-                     <p class="precios">
-                       $ <%= carro.precio %>
-                     </p>
-                     <p class="desc-descripcion">
-                        <%=carro.descuento%>% OFF
-                     </p>
-                  </article>
-               <% } %>
-            <%}) %>
+         <main>
+            <div class="create-container">
+               <a class="button" href="/carros/crear">Vender Auto</a>
             </div>
-             </section> 
+            <section class="gondola1">
 
-      <section class="gondola3">
-         <h1>PORSCHE</h1><br>
-         <div class="productos">
+               <h1>BMW</h1>
+               <div class="productos">
 
-            <% carros.map((carro) => { %>
-               <% if (carro.marca === "PORSCHE") { %>
-                  <article class="articulo">
-                     <a href="/carros/detalle/<%= carro.id %>"><img src="/images/porsche<%=carro.id % 3 + 1%>.jpg" alt="AUDI"></a>
-                     <h4 class="descripcion">
-                        <%=carro.name %>
-                     </h4>
-                     <p class="camion">
-                        <i2 class="fa-solid fa-truck"></i2>
-                     </p>
-                     <p class="precios">
-                       $ <%= carro.precio %>
-                     </p>
-                     <p class="desc-descripcion">
-                        <%=carro.descuento%>% OFF
-                     </p>
-                  </article>
-               <% } %>
-               <%}) %>
+                  <% carros.map((carro)=> { %>
+                     <% if (carro.marca==="BMW" && carro.comprador===null) { %>
+                        <article class="articulo">
+                           <a href="/carros/detalle/<%= carro.id %>"><img src="/images/bmw<%=carro.id % 3 + 1%>.jpg"
+                                 alt="BMW"></a>
+                           <h4 class="descripcion">
+                              <%=carro.name %>
+                           </h4>
+                           <p class="camion">
+                              <i2 class="fa-solid fa-truck"></i2>
+                           </p>
+                           <p class="precios">
+                              $ <%= carro.precio %>
+                           </p>
+                           <p class="desc-descripcion">
+                              <%=carro.descuento%>% OFF
+                           </p>
+                        </article>
+                        <% } %>
+                           <%}) %>
+               </div>
+            </section>
 
+            <section class="gondola2">
+               <h1>AUDI</h1>
 
-            <!--<article class="articulo">
-               <a href="/detalle7"><img src="/images/porche1.webp" alt=></a>
-               <p class="camion">
-                  <i2 class="fa-solid fa-truck"></i2>
-               </p>
-               <p class="precios">$300.000</p>
-               <p class="desc-descripcion">40% off</p>
-               <h4 class="descripcion">Porsche 911</h4>
-            </article>
-
-<<<<<<< HEAD
-      <article class="articulo">
-         <a href="/detalle9"><img src="/images/porche3.jpg" alt=></a>
-         <p class="camion">
-            <i2 class="fa-solid fa-truck"></i2>
-         </p>
-         <p class="precios">$530.570</p>
-         <p class="desc-descripcion">20% off</p>
-         <h4 class="descripcion">Porsche Panamera</h4>
-       </article>
-       </div>
-=======
-            <article class="articulo">
-               <a href="/detalle8"><img src="/images/porche2.jpg" alt=></a>
-
-               <p class="camion">
-                  <i2 class="fa-solid fa-truck"></i2>
-               </p>
-               <p class="precios">$330.000</p>
-               <p class="desc-descripcion">20% off</p>
-               <h4 class="descripcion">Porsche 356</h4>
-            </article>
-
-            <article class="articulo">
-               <a href="/detalle9"><img src="/images/porche3.jpg" alt=></a>
-               <p class="camion">
-                  <i2 class="fa-solid fa-truck"></i2>
-               </p>
-               <p class="precios">$530.570</p>
-               <p class="desc-descripcion">20% off</p>
-               <h4 class="descripcion">Porsche Panamera</h4>
-            </article>-->
+               <div class="productos">
 
 
-         </div>
+                  <% carros.map((carro)=> { %>
+                     <% if (carro.marca==='AUDI' ) { %>
+                        <article class="articulo">
+                           <a href="/carros/detalle/<%= carro.id %>"><img src="/images/audi<%=carro.id % 3 + 1%>.jpg"
+                                 alt="AUDI"></a>
+                           <h4 class="descripcion">
+                              <%=carro.name %>
+                           </h4>
+                           <p class="camion">
+                              <i2 class="fa-solid fa-truck"></i2>
+                           </p>
+                           <p class="precios">
+                              $ <%= carro.precio %>
+                           </p>
+                           <p class="desc-descripcion">
+                              <%=carro.descuento%>% OFF
+                           </p>
+                        </article>
+                        <% } %>
+                           <%}) %>
+               </div>
+            </section>
 
-      </section>
-       </main>
+            <section class="gondola3">
+               <h1>PORSCHE</h1><br>
+               <div class="productos">
 
-    <%-include("partials/footer.ejs")%>
+                  <% carros.map((carro)=> { %>
+                     <% if (carro.marca==="PORSCHE" ) { %>
+                        <article class="articulo">
+                           <a href="/carros/detalle/<%= carro.id %>"><img src="/images/porsche<%=carro.id % 3 + 1%>.jpg"
+                                 alt="AUDI"></a>
+                           <h4 class="descripcion">
+                              <%=carro.name %>
+                           </h4>
+                           <p class="camion">
+                              <i2 class="fa-solid fa-truck"></i2>
+                           </p>
+                           <p class="precios">
+                              $ <%= carro.precio %>
+                           </p>
+                           <p class="desc-descripcion">
+                              <%=carro.descuento%>% OFF
+                           </p>
+                        </article>
+                        <% } %>
+                           <%}) %>
+               </div>
+
+            </section>
+         </main>
+
+         <%-include("partials/footer.ejs")%>
 
 
-</body>
+   </body>
 
 
-   
+
 
    </html>
-  

@@ -10,6 +10,7 @@ home: (req, res) => {
     detalle: (req, res) => {
         return res.render("detalle");
     },
+    
     detalle2: (req, res) => {
         return res.render("detalle2", {productos});
     },
@@ -34,7 +35,6 @@ home: (req, res) => {
     detalle9: (req, res) => {
         return res.render("detalle9");
     },
-
     pago: (req, res)=> {
         return res.render("pago");
     },
@@ -54,8 +54,7 @@ home: (req, res) => {
     ayuda: (req, res) => {
         return res.render("ayuda");
     },
+   
 }
-
-
 
 module.exports = controller;

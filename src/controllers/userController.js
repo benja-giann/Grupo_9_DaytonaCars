@@ -40,7 +40,7 @@ const controller = {
     res.redirect('/');
   },
   perfil: (req, res) => {
-    return res.render('perfil');
+    return res.render("perfil");
   },
   historial: (req, res) => {
     db.Carros.findAll({

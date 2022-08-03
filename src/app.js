@@ -17,6 +17,10 @@ app.use(userMiddleware);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
 
+app.get("/productos/:idProducto", function(req, res){
+    res.send("Bienvenido al detalle del producto" + req.params.idProducto)
+});
+
 const indexRouter = require('./routes/mainRoutes');
 const userRouter = require('./routes/users');
 const productosRouter = require('./routes/productos');
