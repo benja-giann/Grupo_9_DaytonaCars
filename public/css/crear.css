@@ -17,23 +17,21 @@
     align-items: center;
   }
   
+  
   .input {
-    width: fit-content;
-    padding: 4px;
-    border-radius: 4px;
-    border-width: 1px;
-  }
+    font-size: 25px;
+    margin-top: 10px;
+    border: 1px solid;
+}
 
   .button-container {
-    display: flex;
-    margin-top: 16px;
+width: auto;
+text-align: -webkit-right;
+margin-right: 8%;
   }
 
-  .button-container button{
-    margin-right: 8px;
-  }
-  
   .button {
+    margin-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +46,8 @@
   }
 
   .main-registro{
+    margin: 10%;
+    display: flex;
+    justify-content: center;
       padding: 4%;
-      margin-left: 20%;
   }

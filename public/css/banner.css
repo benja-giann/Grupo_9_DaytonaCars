@@ -1,6 +1,7 @@
 .banner2 {
     height: 30vh;
     margin-bottom: 25px;
+    margin-left: 0%;
     
     margin-top: 50px;
     object-fit: cover;
@@ -9,21 +10,38 @@
     animation: banner2 10s infinite alternate;
 
     position: relative;
-    width: 101%;
+    width: 120%;
   }
   
+@media (min-width:321px){ 
+.banner2 {
+  height: 30vh;
+  margin-bottom: 25px;
+  margin-left: 10%;
+  
+  margin-top: 50px;
+  object-fit: cover;
+  background-size: 100% 100%;
+
+  animation: banner2 10s infinite alternate;
+
+  position: relative;
+  width: 80%;
+}
+}
+
   @keyframes banner2 {
     0%,
     30% {
-      background-image: url(/images/bmwbanner.jpg);
+      background-image: url(/images/bmw1.jpg);
     }
     35%,
     65% {
-      background-image: url(/images/logo-audi.jfif);
+      background-image: url(/images/audiE-Tron.jpg);
     }
     70%,
     100% {
-      background-image: url(/images/porsche4k.jpg);
+      background-image: url(/images/porsche-aleron.jpg);
     }
   }
   
