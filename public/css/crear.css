@@ -43,6 +43,7 @@ margin-right: 8%;
     background-color: black;
     color: white;
     cursor: pointer;
+    margin-left: 8%;
   }
 
   .main-registro{
@@ -50,4 +51,5 @@ margin-right: 8%;
     display: flex;
     justify-content: center;
       padding: 4%;
+    
   }

@@ -1,0 +1,59 @@
+<%-include("partials/header.ejs")%> 
+<%-include("partials/head.ejs")%>
+
+<body>
+   
+    <%= console.log("parapoder inteficiar carros facilmente", carros) %> 
+    
+    
+    
+    <main class="contenedor-perfil-usuario">
+
+        <h2 class="titulo-perfil"> Perfil de usuario</h2>
+        
+        <div class="datos-usuario-contenido">
+        <section class="datos-usuario">
+            <div class="imagen-de-perfil">
+            </div>
+            <div>
+                <div>
+                    <label for="nombre">nombre</label> <input type="text" name="nombre">
+                </div>
+                <div>
+                    <label for="direccion">direccion</label> <input type="text" name="direccion">
+                </div>
+                <div>
+                    <label for="pago">forma de pago</label> <input type="text" name="pago">
+                </div>
+            </div>
+        </section>
+        <section>
+            <article>historial de compra</article>
+            <div><% carros.map((carro) => { %>
+                <article class="articulo">
+                  <a href="/carros/detalle/<%= carro.id %>">
+                    <img src="/images/<%= carro.marca.toLowerCase() %><%=carro.id % 3 + 1%>.jpg" alt="carro"/>
+                  </a>
+                  <h4 class="descripcion"><%=carro.name %></h4>
+                  <div class="carro-footer">
+                    <div>
+                      <p class="desc-descripcion"><%=carro.descuento%>% OFF</p>
+                      <p class="precios">$ <%= carro.precio %></p>
+                    </div>
+                    <p class="camion">
+                      <i class="fa-solid fa-truck"></i>
+                    </p>
+                  </div class="carro-footer">
+                </article>
+                <%}) %></div>
+        </section>
+        <section>
+            <article>vehiculos del usuario en venta</article>
+
+
+        </section>
+    </div>
+    </main>
+<%-include("partials/footer.ejs")%>
+</body>
+</html>

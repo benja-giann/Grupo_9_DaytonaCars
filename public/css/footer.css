@@ -1,11 +1,13 @@
+@media (min-width:311px){
 footer {
-  width: 120%;
+  width: 130%;
     padding: 13%;
     background-color: black;
     text-align: center;
-    
+    margin-left: -3%;
   }
-  
+
+}  
   
   
   .divsFooter {
@@ -22,8 +24,8 @@ footer {
   .piedefooter {
     background-color: #000;
     color: #fff;
-    padding: 20px;
-    width: 120%;
+    margin-left: -3%;
+    width: 156%;
   }
   
   /*section {
@@ -33,7 +35,7 @@ footer {
 
   @media (min-width: 768px)  {
       footer{
-        width: 120%;
+       width: 130%;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;

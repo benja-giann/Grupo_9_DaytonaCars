@@ -37,11 +37,11 @@
     }
     35%,
     65% {
-      background-image: url(/images/audiE-Tron.jpg);
+      background-image: url(/images/audiHibrido.jpg);
     }
     70%,
     100% {
-      background-image: url(/images/porsche-aleron.jpg);
+      background-image: url(/images/porsche3.jpg);
     }
   }
   
@@ -59,3 +59,4 @@
       font-size: 28px;
       font-style: italic;
   }
+
