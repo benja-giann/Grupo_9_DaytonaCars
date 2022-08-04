@@ -36,7 +36,7 @@ const controller = {
         console.log('userrr', user.id)
         req.session.usuario = user.id;
         res.cookie('usuario', user);
-        res.redirect('/');
+        res.redirect('/users/perfil');
       } else {
         res.render('login', {errors: [{msg:'Error, no se encontro usuario con ese correo'}]})
       }
@@ -57,7 +57,6 @@ const controller = {
 
   perfil: (req, res) => {
 
-    if (req.session.usuario) {
      db.Carros.findAll({
       where: {
         comprador: req.session.usuario,
@@ -65,6 +64,7 @@ const controller = {
     }).then((carrosdata) => {
         //const carros = JSON.stringify(carrosdata, null, 2)
         return res.render('perfilUsuario', {carros:carrosdata})
+        
       });
     
      // db.Usuarios.findOne({
@@ -72,13 +72,12 @@ const controller = {
        //   id: req.session.usuario,
        // },
       //}).then((datosDeUsuario) => {
-      //  return res.render('perfilUsuario', {datos:datosDeUsuario.toJSON()});
+      // return res.render('perfilUsuario', {datos:datosDeUsuario.toJSON()});
       //});
-    }
-   // return res.render('perfilUsuario', {carros:[]});     
-  },
+    },
+
   edit: function (req, res) {
-    db.Usuario.findByPk(req.params.id)
+    db.Usuario.findByPk(req.session.users)
       .then(function (usuario) {
         res.render("editarUsuario",
           { usuario: usuario});

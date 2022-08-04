@@ -10,10 +10,7 @@
     <div class="main-registro">
 
     <section >
-      <% errors.forEach((error) => { %>
-        <p class="mensaje-error"><%= error.msg %></p>
-     <% }) %>
-
+     
       <form class="formulario-registro" action="/users/register" method="POST">
         <div>
           <br />
@@ -31,7 +28,10 @@
           <br />
           <input class="input" type="password" name="comfirm" placeholder="Confirmar Contraseña" value="<%= locals.old && old.comfirm ? old.comfirm : "" %>"/>
         </div>
-
+        <% errors.forEach((error) => { %>
+          <p class="mensaje-error"><%= error.msg %></p>
+       <% }) %>
+  
         
 
         <div class="button-container">
