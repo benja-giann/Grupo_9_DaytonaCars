@@ -50,9 +50,11 @@ body{
     color: red
   }
 
+ 
+
   @media (min-width:311px){ 
     .banner2 {
-      height: 30vh;
+      height: 40vh;
       margin-bottom: 25px;
       margin-left: 0%;
       
@@ -63,7 +65,7 @@ body{
       animation: banner2 10s infinite alternate;
     
       position: relative;
-      width: 155%;
+      width: 156%;
       margin-left: -3%;
      
     }
@@ -111,7 +113,7 @@ body{
         @media (min-width:768px){ 
           .banner2 {
             top: 45px;
-            height: 30vh;
+            height: 40vh;
             margin-bottom: 25px;
             
             

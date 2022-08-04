@@ -48,6 +48,12 @@ const controller = {
     res.locals.usuario = null;
     res.redirect('/');
   },
+  perfilUsuario:(req, res)=>{
+    db.Usuarios.findByPk(req.params.id).then(function (usuario) {
+      res.render("perfilUsuario",
+        { usuario: usuario});
+    })
+  },
 
   perfil: (req, res) => {
 
@@ -71,6 +77,34 @@ const controller = {
     }
    // return res.render('perfilUsuario', {carros:[]});     
   },
+  edit: function (req, res) {
+    db.Usuario.findByPk(req.params.id)
+      .then(function (usuario) {
+        res.render("editarUsuario",
+          { usuario: usuario});
+      })
+  },
+  update: function(req, res){
+    db.Usuario.update({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+    },{
+      where:{
+        id: req.params.id
+      }
+    })
+    res.redirect("/perfil/edit/" + req.params.id)
+  },
+  delete: function (req, res) {
+    db.Carros.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+    res.redirect("/home")
+  },
+
   historial: (req, res) => {
     db.Carros.findAll({
       where: {

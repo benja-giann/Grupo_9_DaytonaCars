@@ -27,8 +27,26 @@
   .button-container {
 width: auto;
 text-align: -webkit-right;
-margin-right: 8%;
+margin-left: 10px;
   }
+
+  @media (min-width:311px){
+    .button-container {
+      width: auto;
+      text-align: -webkit-right;
+      margin-left: 10px;
+        }
+  }
+
+  @media (min-width:768px){
+    .button-container {
+      width: auto;
+      text-align: -webkit-right;
+      margin-left: 10px;
+      margin-right: 25px;
+        }
+  }
+
 
   .button {
     margin-top: 10%;
@@ -47,9 +65,41 @@ margin-right: 8%;
   }
 
   .main-registro{
-    margin: 10%;
+    margin: 0%;
     display: flex;
     justify-content: center;
       padding: 4%;
+      margin-left: 50%;
     
   }
+
+  @media (min-width:320px){
+    .main-registro{
+      margin: 0%;
+      display: flex;
+      justify-content: center;
+        padding: 4%;
+        margin-left: 10%;
+  }
+}
+
+@media (min-width:425px){
+  .main-registro{
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+      padding: 4%;
+     
+}
+}
+
+@media (min-width:768px){
+  .main-registro{
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  padding: 4%;
+  margin-left: 28%;
+  margin-top: 10%;
+}
+}

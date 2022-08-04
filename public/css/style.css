@@ -11,13 +11,10 @@
 @import url(register.css);
 @import url(crear.css);
 @import url(historial.css);
-<<<<<<< HEAD
 @import url(body.css);
-=======
+
 @import url(perfilUsuario.css);
-
-
-
+@import url(login.css);
 *{
   margin: 0;
   padding: 0;

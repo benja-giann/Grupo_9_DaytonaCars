@@ -17,7 +17,11 @@ router.get('/login', controller.renderLogin);
 router.post('/login', controller.login);
 router.get('/logout', controller.logout);
 
+router.get('/edit/:id', controller.edit);
+router.get('/edit/:id', controller.update);
+
 router.get('/perfil', controller.perfil);
+router.get('/perfilUsuario', controller.perfilUsuario);
 router.get('/historial', controller.historial);
 
 // API

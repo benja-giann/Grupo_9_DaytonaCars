@@ -10,7 +10,6 @@ home: (req, res) => {
     detalle: (req, res) => {
         return res.render("detalle");
     },
-    
     detalle2: (req, res) => {
         return res.render("detalle2", {productos});
     },
@@ -53,7 +52,14 @@ home: (req, res) => {
     },
     ayuda: (req, res) => {
         return res.render("ayuda");
+    }, 
+    editarCarro: (req, res) => {
+        return res.render("editarCarro");
     },
+    editarUsuario: (req, res) => {
+        return res.render("editarUsuario");
+    },
+
    
 }
 

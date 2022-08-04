@@ -41,8 +41,8 @@
 
     <main class="main-registro">
         <section class="registro-con-correo">
-            <div id="errorList"></div>
-            <form class="formulario-registro" action="/users/login" method="POST">
+            
+            <form class="formulario-registro" action="/users/perfil" method="POST">
                 <div>
                   <br />
                   <input class="input" type="email" name="email" placeholder="Email" id="email" />
@@ -51,7 +51,7 @@
                   <br />
                   <input class="input" type="password" name="password" placeholder="Contraseña" id="password"/>
                 </div>
-
+                <div class="completarCampo" id="errorList"></div>
                 <div class="button-container">
                   <button class="button" type="submit">Ingresar</button>
                 </div>
