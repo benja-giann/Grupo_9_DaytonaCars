@@ -56,15 +56,21 @@ const controller = {
 
   perfil: (req, res) => {
 
-     db.Carros.findAll({
-      where: {
-        comprador: req.session.usuario,
-      },
-    }).then((carrosdata) => {
-        //const carros = JSON.stringify(carrosdata, null, 2)
-        return res.render('perfilUsuario', {carros:carrosdata})
+    //  db.Carros.findAll({
+    //   where: {
+    //     comprador: req.session.usuario,
+    //   },
+    // }).then((carrosdata) => {
+    //     //const carros = JSON.stringify(carrosdata, null, 2)
+    //     return res.render('perfilUsuario', {carros:carrosdata})
         
-      });
+    //   });
+
+      db.Usuarios.findAll({ where: {id: req.session.usuario},
+        include: ['carros']
+      }).then(userData =>{
+         res.render('perfilUsuario', {data:userData})
+        })
     
      // db.Usuarios.findOne({
        // where: {
