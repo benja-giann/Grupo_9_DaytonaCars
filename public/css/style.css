@@ -11,9 +11,6 @@
 @import url(register.css);
 @import url(crear.css);
 @import url(historial.css);
-<<<<<<< HEAD
-@import url(body.css);
-=======
 @import url(perfilUsuario.css);
 
 
@@ -30,9 +27,7 @@ ul li a {
   flex-direction: row;
 }
 
-body{
-  background-color: darkred;
-}
+
 
 body {
   font-family: "Roboto", sans-serif;
@@ -54,27 +49,21 @@ body {
 }
 
 .gondola1 h1{
-  color: white;
+  color: black;
   margin-left: 15%;
-  width: 100%;
-  background-color: darkred;
-  margin-left: 0%;
+  font-size: 30px;
 }
 
 .gondola2 h1{
-  color: white;
+  color: black;
   margin-left: 15%;
-  width: 100%;
-  background-color: darkred;
-  margin-left: 0%;
+  font-size: 30px;
 }
 
 .gondola3 h1{
-  color: white;
+  color: black;
   margin-left: 15%;
-  width: 100%;
-  background-color: darkred;
-  margin-left: 0%;
+  font-size: 30px;
 }
 
 .articulo {

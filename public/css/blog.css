@@ -23,7 +23,7 @@
 @media (min-width:768px) {
     #blog .contenedor{
         display: flex;
-        width: 100%
+        width: 100%;
         justify-content: space-evenly;
     }   
 }

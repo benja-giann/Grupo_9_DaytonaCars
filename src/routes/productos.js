@@ -13,4 +13,8 @@ router.post('/', function (req, res) {
   res.send('creacion de productos');
 });
 
+/*app.post('/uploaded', (req, res)=>{
+  res.send('uploaded');
+} );*/
+
 module.exports = router;

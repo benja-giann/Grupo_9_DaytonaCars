@@ -32,12 +32,14 @@
           <div>
             <label for="precio">precio</label>
             <br />
-            <input class="input" type="number" name="precio" />
+            <input class="input" type="number" name="precio" >
           </div>
-          <!-- <div class="input-contaier">
-            <label>Seleccionar la imagen del vehiculo a vender</label>
-            <input class="input" type="file" name="imagen" accept="jpg" multiple />
-          </div> -->
+        <form action="/upload" method="POST">
+          <input type="file" name="image" enctype="multipart/form-data">
+          <button type="submit">
+            Upload
+          </button>
+        </form>
           <div class="button-container">
             <button class="button" type="submit">Agregar producto</button>
             <button class="button" type="reset">Reset</button>
