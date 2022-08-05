@@ -33,9 +33,9 @@ router.get('/detalle9', mainController.detalle9);
 
 router.get('/productos', mainController.productos);
 
-router.get('/editarCarro', mainController.editarCarro);
+//router.get('/editarCarro', mainController.editarCarro);
 
-router.get('/editarUsuario', mainController.editarUsuario);
+//router.get('/editarUsuario', mainController.editarUsuario);
 
 router.get('/servicios', mainController.servicios);
 
