@@ -33,7 +33,6 @@ const controller = {
     }).then(function (usuario) {
       if (usuario) {
         const user = usuario.toJSON();
-        console.log('userrr', user.id)
         req.session.usuario = user.id;
         res.cookie('usuario', user);
         res.redirect('/users/perfil');

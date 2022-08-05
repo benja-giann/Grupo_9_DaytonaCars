@@ -19,7 +19,7 @@ router.post('/login', controller.login);
 router.get('/logout', controller.logout);
 
 
-router.get('/perfil',middelwares.validacionUsuario, controller.perfil);
+router.get('/perfil', controller.perfil);
 router.get('/perfil/edit', middelwares.validacionUsuario, controller.edit);
 router.put('/perfil/edit', middelwares.validacionUsuario,controller.update);
 router.delete('/perfil/edit', controller.delete);
