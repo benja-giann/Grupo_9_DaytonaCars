@@ -13,10 +13,14 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../', 'public')));
+<<<<<<< HEAD
 app.use(userMiddleware);
 app.use(multer({
     dest: 'public/images'
 }).single('image'))
+=======
+app.use(userMiddleware.pasandoinfoVistas);
+>>>>>>> 7c963619326a8fae6f1c6907675700f1931311d2
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));

@@ -11,10 +11,13 @@
 @import url(register.css);
 @import url(crear.css);
 @import url(historial.css);
+<<<<<<< HEAD
+=======
+@import url(body.css);
+
+>>>>>>> 7c963619326a8fae6f1c6907675700f1931311d2
 @import url(perfilUsuario.css);
-
-
-
+@import url(login.css);
 *{
   margin: 0;
   padding: 0;

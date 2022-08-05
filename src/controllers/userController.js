@@ -33,10 +33,9 @@ const controller = {
     }).then(function (usuario) {
       if (usuario) {
         const user = usuario.toJSON();
-        console.log('userrr', user.id)
         req.session.usuario = user.id;
         res.cookie('usuario', user);
-        res.redirect('/');
+        res.redirect('/users/perfil');
       } else {
         res.render('login', {errors: [{msg:'Error, no se encontro usuario con ese correo'}]})
       }
@@ -48,29 +47,68 @@ const controller = {
     res.locals.usuario = null;
     res.redirect('/');
   },
+  perfilUsuario:(req, res)=>{
+    db.Usuarios.findByPk(req.params.id).then(function (usuario) {
+      res.render("perfilUsuario",
+        { usuario: usuario});
+    })
+  },
 
   perfil: (req, res) => {
 
-    if (req.session.usuario) {
-     db.Carros.findAll({
-      where: {
-        comprador: req.session.usuario,
-      },
-    }).then((carrosdata) => {
-        //const carros = JSON.stringify(carrosdata, null, 2)
-        return res.render('perfilUsuario', {carros:carrosdata})
-      });
+    //  db.Carros.findAll({
+    //   where: {
+    //     comprador: req.session.usuario,
+    //   },
+    // }).then((carrosdata) => {
+    //     //const carros = JSON.stringify(carrosdata, null, 2)
+    //     return res.render('perfilUsuario', {carros:carrosdata})
+        
+    //   });
+
+      db.Usuarios.findAll({ where: {id: req.session.usuario},
+        include: ['carros']
+      }).then(userData =>{
+         res.render('perfilUsuario', {data:userData})
+        })
     
      // db.Usuarios.findOne({
        // where: {
        //   id: req.session.usuario,
        // },
       //}).then((datosDeUsuario) => {
-      //  return res.render('perfilUsuario', {datos:datosDeUsuario.toJSON()});
+      // return res.render('perfilUsuario', {datos:datosDeUsuario.toJSON()});
       //});
-    }
-   // return res.render('perfilUsuario', {carros:[]});     
+    },
+
+  edit: function (req, res) {
+    db.Usuario.findByPk(req.session.users)
+      .then(function (usuario) {
+        res.render("editarUsuario",
+          { usuario: usuario});
+      })
   },
+  update: function(req, res){
+    db.Usuario.update({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+    },{
+      where:{
+        id: req.params.id
+      }
+    })
+    res.redirect("/perfil/edit/" + req.params.id)
+  },
+  delete: function (req, res) {
+    db.Carros.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+    res.redirect("/home")
+  },
+
   historial: (req, res) => {
     db.Carros.findAll({
       where: {

@@ -1,0 +1,51 @@
+<%-include("partials/header.ejs")%> <%-include("partials/head.ejs")%>
+
+<body class="allBody">
+  <main>
+    <div class="main-registro">
+      <section>
+        <form class="formulario-crear" action="/carros/edit<%=carro.id%>" method="POST">
+          <div>
+            <label for="name">Nombre del vehiculo</label>
+            <br />
+            <input class="input" type="text" name="name" value="<%=carro.name%>"/>
+          </div>
+          <div>
+            <label for="ficha_tecnica">ficha tecnica</label>
+            <br />
+            <textarea name="ficha_tecnica" rows="4"></textarea>
+          </div>
+          <div>
+            <label for="marca">marca</label>
+            <br />
+            <select class="input" name="marca">
+              <option value="BMW">BMW</option>
+              <option value="AUDI">AUDI</option>
+              <option value="PORSCHE">PORSCHE</option>
+            </select>
+          </div>
+          <div>
+            <label for="descuento">descuento</label>
+            <br />
+            <input class="input" type="number" name="descuento" min="0" max="100" value="<%=carro.descuento%>" />% OFF
+          </div>
+          <div>
+            <label for="precio">precio</label>
+            <br />
+            <input class="input" type="number" name="precio" value="<%=carro.precio%>"/>
+          </div>
+          <!-- <div class="input-contaier">
+            <label>Seleccionar la imagen del vehiculo a vender</label>
+            <input class="input" type="file" name="imagen" accept="jpg" multiple />
+          </div> -->
+          <div class="button-container">
+            <button class="button" type="submit">Agregar producto</button>
+            <button class="button" type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <%-include("partials/footer.ejs")%>
+</body>

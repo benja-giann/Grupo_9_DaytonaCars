@@ -1,11 +1,10 @@
-<%-include("partials/header.ejs")%> 
-<%-include("partials/head.ejs")%>
+ <%-include("partials/head.ejs")%>
 
 <body>
-   
-    <%= console.log("parapoder inteficiar carros facilmente", carros) %> 
+    <%-include ("partials/header.ejs") %>
+
     
-    
+    <%= console.log('Mirando datos de usuario', data[0].carros)  %> 
     
     <main class="contenedor-perfil-usuario">
 
@@ -17,35 +16,38 @@
             </div>
             <div>
                 <div>
-                    <label for="nombre">nombre</label> <input type="text" name="nombre">
+
+                  
+                    <label for="nombre">nombre de usuario</label> <input type="text" name="nombre" value="<%= data[0].name %>">
                 </div>
-                <div>
-                    <label for="direccion">direccion</label> <input type="text" name="direccion">
-                </div>
-                <div>
-                    <label for="pago">forma de pago</label> <input type="text" name="pago">
-                </div>
+                <div class="create-container">
+                  <a class="button" href="/carros/crear">Vender Auto</a>
+               </div>
             </div>
         </section>
         <section>
             <article>historial de compra</article>
-            <div><% carros.map((carro) => { %>
-                <article class="articulo">
-                  <a href="/carros/detalle/<%= carro.id %>">
-                    <img src="/images/<%= carro.marca.toLowerCase() %><%=carro.id % 3 + 1%>.jpg" alt="carro"/>
-                  </a>
-                  <h4 class="descripcion"><%=carro.name %></h4>
-                  <div class="carro-footer">
-                    <div>
-                      <p class="desc-descripcion"><%=carro.descuento%>% OFF</p>
-                      <p class="precios">$ <%= carro.precio %></p>
-                    </div>
-                    <p class="camion">
-                      <i class="fa-solid fa-truck"></i>
-                    </p>
-                  </div class="carro-footer">
-                </article>
-                <%}) %></div>
+            <div><% [data[0].carros].map((carro) => { %>
+              <article class="articulo">
+                <a href="/carros/detalle/<%= carro.id %>">
+                  <img src="/images/<%= carro.marca.toLowerCase() %><%=carro.id % 3 + 1%>.jpg" alt="carro"/>
+                </a>
+                <h4 class="descripcion"><%=carro.name %></h4>
+                <div class="carro-footer">
+                  <div>
+                    <p class="desc-descripcion"><%=carro.descuento%>% OFF</p>
+                    <p class="precios">$ <%= carro.precio %></p>
+                  </div>
+                  <p class="camion">
+                    <i class="fa-solid fa-truck"></i>
+                  </p>
+                </div class="carro-footer">
+              </article>
+              <%}) %></div>
+
+            
+
+           
         </section>
         <section>
             <article>vehiculos del usuario en venta</article>

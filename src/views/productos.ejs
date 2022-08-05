@@ -6,6 +6,31 @@
          <div class="banner2">
 
 
+    
+     <section class="gondola1">
+
+      <h1>BMW</h1>
+      <div class="productos">
+
+      <% carros.map((carro) => { %>
+         <% if (carro.marca === "BMW" && carro.comprador === null) { %>
+                  <article class="articulo">
+                     <a href="/carros/detalle/<%= carro.id %>"><img src="/images/bmw<%=carro.id % 3 + 1%>.jpg" alt="BMW"></a>
+                     <h4 class="descripcion">
+                        <%=carro.name %>
+                     </h4>
+                     <p class="camion">
+                        <i2 class="fa-solid fa-truck"></i2>
+                     </p>
+                     <p class="precios">
+                       $ <%= carro.precio %>
+                     </p>
+                     <p class="desc-descripcion">
+                        <%=carro.descuento%>% OFF
+                     </p>
+                  </article>
+         <% } %>
+      <%}) %>       
          </div>
 
          <main>
