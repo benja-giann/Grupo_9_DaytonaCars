@@ -1,5 +1,6 @@
 #blog .contenedor {
     padding: 5%;
+    margin: 10%;
     text-align: center;
     margin-left: 5%;
 }
@@ -22,8 +23,8 @@
 @media (min-width:768px) {
     #blog .contenedor{
         display: flex;
+        width: 100%
         justify-content: space-evenly;
-        flex-wrap: wrap;
     }   
 }
 

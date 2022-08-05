@@ -12,6 +12,9 @@ router.get('/carrito', mainController.carrito);
 
 // router.get('/detalle', mainController.detalle);
 
+
+router.get('/detalle', mainController.detalle);
+
 router.get('/detalle2', mainController.detalle2);
 
 router.get('/detalle3', mainController.detalle3);
@@ -27,6 +30,12 @@ router.get('/detalle7', mainController.detalle7);
 router.get('/detalle8', mainController.detalle8);
 
 router.get('/detalle9', mainController.detalle9);
+
+router.get('/productos', mainController.productos);
+
+router.get('/editarCarro', mainController.editarCarro);
+
+router.get('/editarUsuario', mainController.editarUsuario);
 
 router.get('/servicios', mainController.servicios);
 

@@ -1,5 +1,5 @@
 <%-include("partials/head.ejs")%>
-<body>
+<body class="allBody">
  <%-include("partials/header.ejs") %>
   <div class="banner2">
 
@@ -10,36 +10,36 @@
     <div class="main-registro">
 
     <section >
-      <% errors.forEach((error) => { %>
-        <p class="mensaje-error"><%= error.msg %></p>
-     <% }) %>
-
+     
       <form class="formulario-registro" action="/users/register" method="POST">
         <div>
-          <label for="name">Nombre</label>
           <br />
-          <input class="input" type="text" name="name" value="<%= locals.old && old.name ? old.name : "" %>"/>
+          <input class="input" type="text" name="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : "" %>"/>
         </div>
         <div>
-          <label for="name">Correo Electronico</label>
           <br />
-          <input class="input" type="email" name="email" value="<%= locals.old && old.email ? old.email : "" %>"/>
+          <input class="input" type="email" name="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : "" %>"/>
         </div>
         <div>
-          <label for="name">Contraseña</label>
           <br />
-          <input class="input" type="password" name="password" value="<%= locals.old && old.password ? old.password : "" %>"/>
+          <input class="input" type="password" name="password" placeholder="Contraseña" value="<%= locals.old && old.password ? old.password : "" %>"/>
         </div>
         <div>
-          <label for="name">Confirmar Contraseña</label>
           <br />
-          <input class="input" type="password" name="comfirm" value="<%= locals.old && old.comfirm ? old.comfirm : "" %>"/>
+          <input class="input" type="password" name="comfirm" placeholder="Confirmar Contraseña" value="<%= locals.old && old.comfirm ? old.comfirm : "" %>"/>
         </div>
+        <% errors.forEach((error) => { %>
+          <p class="mensaje-error"><%= error.msg %></p>
+       <% }) %>
+  
+        
 
         <div class="button-container">
           <button class="button" type="submit">Crear Cuenta</button>
-          <button class="button" type="reset">Reset</button>
         </div>
+        <div class="button-container">
+          <button class="button" type="reset">Reset</button>
+      </div>
       </form>
     </section>
     </div>

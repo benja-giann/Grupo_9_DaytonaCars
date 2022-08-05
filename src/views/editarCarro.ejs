@@ -4,11 +4,11 @@
   <main>
     <div class="main-registro">
       <section>
-        <form class="formulario-crear" action="/carros/crear" method="POST">
+        <form class="formulario-crear" action="/carros/edit<%=carro.id%>" method="POST">
           <div>
             <label for="name">Nombre del vehiculo</label>
             <br />
-            <input class="input" type="text" name="name" />
+            <input class="input" type="text" name="name" value="<%=carro.name%>"/>
           </div>
           <div>
             <label for="ficha_tecnica">ficha tecnica</label>
@@ -27,12 +27,12 @@
           <div>
             <label for="descuento">descuento</label>
             <br />
-            <input class="input" type="number" name="descuento" min="0" max="100" />% OFF
+            <input class="input" type="number" name="descuento" min="0" max="100" value="<%=carro.descuento%>" />% OFF
           </div>
           <div>
             <label for="precio">precio</label>
             <br />
-            <input class="input" type="number" name="precio" />
+            <input class="input" type="number" name="precio" value="<%=carro.precio%>"/>
           </div>
           <!-- <div class="input-contaier">
             <label>Seleccionar la imagen del vehiculo a vender</label>

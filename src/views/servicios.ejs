@@ -1,74 +1,11 @@
 <%-include("partials/head.ejs")%>
+<%-include("partials/header.ejs") %>
 
-<body>
-    <header>
-        <div class="pruebaHeader">
-            
-            <h1><img src="/images/logo.jpeg" class="logo">Daytona</h1>
-            <input type="checkbox" id="menu-bar">
-            <label class="icon-menu" for="menu-bar"><i class="fa-solid fa-bars"></i></label>
-
-        <nav class="menu">
-            <ul>
-                <li><a href="/servicios">Servicio al Cliente</a></li>
-                <li><a href="/productos">Autos</a></li>
-                <li><a href="/ayuda">Ayuda</a></li>
-                <li class="right"><a href="/register">Crea tu cuenta <i class="fa-solid fa-user"></i></a></li>
-                <li class="right"><a href="/login">Ingresa <i class="fa-solid fa-user-check"></i></a></li>
-                <li class="right"><a href="/carrito">Carrito<i class="fa-solid fa-basket-shopping"></i></a></li>
-            </ul>
-            
-        </nav>
-    </div>
-    </header>
-    <div class="banner2">
-
-    </div>
+<body class="allBody">
+    <div class="banner2"></div>
 
 
-
-    <footer>
-        <div class="divsFooter">
-            <strong>Daytona</strong>
-            <br>
-            <br>
-            <a href="/nuestraEmpresa" class="direcciones"> Empresa</a>
-            <br>
-            <a href="/sucursales" class="direcciones">Sucursales</a>
-        </div>
-        <div class="divsFooter"><strong>Servicio al Cliente</strong>
-            <br>
-            <br>
-            <a href="/asesoramiento" class="direcciones">Asesoramiento</a>
-            <br>
-            <a href="/solicitudTestDrive" class="direcciones">Solicitud de Test Drive </a>
-            <br>
-        </div>
-        <div class="divsFooter"> <strong>Redes Sociales </strong>
-            <br>
-            <br>
-            <a href="https://www.facebook.com" class="direcciones">Facebook</a>
-            <br>
-            <a href="https://www.instagram.com" class="direcciones">instagram</a>
-            <br>
-            <a href="https://www.twitter.com" class="direcciones">twitter</a>
-            <br>
-        </div>
-        <div class="divsFooter"> <strong>Modelos</strong>
-            <br>
-            <a href="/login" class="direcciones">Electricos</a>
-            <br>
-            <a href="/login" class="direcciones">Hibridos</a>
-            <br>
-            <a href="/login" class="direcciones">Gasoleros</a>
-            <br>
-            <a href="/login" class="direcciones">Nafteros</a>
-        </div>
-        </section>
-    </footer>
-    <div class="piedefooter">
-        <p class="holafooter">Copyright © 2000-2022 Daytona S.R.L.</p>
-    </div>
+<%-include("partials/footer.ejs") %>
 </body>
 
 </html>
